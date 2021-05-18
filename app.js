@@ -47,7 +47,7 @@ app.locals.serviceName = config.serviceName
 // Nunjucks configuration for application
 var appViews = [
   path.join(__dirname, 'app/views/'),
-  path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components'),
+  path.join(__dirname, 'node_modules/@nwisbeta/nhswales-frontend/packages/components'),
   path.join(__dirname, 'docs/views/')
 ]
 
@@ -65,7 +65,7 @@ utils.addNunjucksFilters(nunjucksAppEnv)
 
 
 // Session uses service name to avoid clashes with other prototypes
-const sessionName = 'nhsuk-prototype-kit-' + (Buffer.from(config.serviceName, 'utf8')).toString('hex')
+const sessionName = 'nhswales-prototype-kit-' + (Buffer.from(config.serviceName, 'utf8')).toString('hex')
 let sessionOptions = {
   secret: sessionName,
   cookie: {
@@ -153,8 +153,8 @@ documentationApp.set('view engine', 'html');
 
 // Middleware to serve static assets
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/packages')));
-app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/dist')));
+app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/@nwisbeta/nhswales-frontend/packages')));
+app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/@nwisbeta/nhswales-frontend/dist')));
 
 
 // Check if the app is documentation only
@@ -181,7 +181,7 @@ if (useDocumentation || onlyDocumentation == 'true') {
   // Nunjucks configuration for documentation
   var docViews = [
     path.join(__dirname, 'docs/views/'),
-    path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components')
+    path.join(__dirname, 'node_modules/@nwisbeta/nhswales-frontend/packages/components')
   ]
 
   var nunjucksAppEnv = nunjucks.configure(docViews, {
