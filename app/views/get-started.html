@@ -34,29 +34,26 @@
 
       <!-- Change the page title here -->
       <h1>
-      Terminology service FHIR API user guide
+      Terminology service API user guide
       </h1>
 
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
       <p class="nhsuk-lede-text">
-        How to search and read SNOMED CT content using the NHS Wales terminology service FHIR API
+        How to search and read SNOMED CT electronic health record content using a FHIR API
       </p>
       <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
         <h2 class="nhsuk-u-visually-hidden">Contents</h2>
         <ol class="nhsuk-contents-list__list">
           <li class="nhsuk-contents-list__item" aria-current="page">
-            <a class="nhsuk-contents-list__link" href="index.html">Overview</a>
+            <a class="nhsuk-contents-list__link" href="overview">Overview</a>
           </li>
           <li class="nhsuk-contents-list__item">
             <span class="nhsuk-contents-list__current">Get started</span>
           </li>
           <li class="nhsuk-contents-list__item">
-            <a class="nhsuk-contents-list__link" href="#">Sample code</a>
-          </li>
-          <li class="nhsuk-contents-list__item">
-            <a class="nhsuk-contents-list__link" href="#">Authentication</a>
+            <a class="nhsuk-contents-list__link" href="#">Sample API requests</a>
           </li>
           <li class="nhsuk-contents-list__item">
             <a class="nhsuk-contents-list__link" href="#">Terms of use</a>
@@ -65,40 +62,59 @@
       </nav>
 
       <h2>Get started</h2>
-      <P>You need to request access if you want to develop against the API. There are lots of resources available to support you in creating your application. </p>
-      <h3>1. Request access to the API</h3>
-      <p><a href="#">Email anne.example@wales.nhs.uk to ask for access</a>, and include:</p>
+      <h3>1. Registering interest in access</h3>
+      <p>You can make a request to access the terminology service API if:</p>
       <ul>
-          <li>your organisation, for example an NHS Wales health board or a 3rd party</li>
-        <li>the reason for your request, for example that you'd like to use the API to retrieve content from the Welsh Data Dictionary</li>
-      </ul>
-      <p>This will help the terminology service team understand the best way to support your request.</p>
+        <li>you work for an NHS Wales health board</li>
+        <li>you are a 3rd party organisation sponsored by an NHS Wales health board</li>
+        </ul>
+        <p><a href="#">Email terminology.service@wales.nhs.uk to register interest</a>. In the email you should tell us the reason for your request, for example that you'd like to use the API to retrieve content from the Welsh Data Dictionary. This will help us to understand the best way to support you.</p>
+      <p>It may take up to 5 months to complete the access and implementation process for 3rd parties.</p>
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 
-      <h3>2. Understand FHIR API resources</h3>
-      <p>The API is made up of resources that follow the standard FHIR structure of:
-      <ul>
-        <li>CodeSystem, also known as ontology or terminology</li>
-      <li>ValueSet</li>
-    <li>ConceptMap</li>
-  </ul>
-  <p>There are standard <a href="https://www.hl7.org/fhir/operations.html">operations defined for each resource</a>, such as <code>$lookup</code>, <code>$expand</code> and <code>$translate</code>.</p>
-<p>One way to understand this structure is to think of the CodeSystem as a book, and the ValueSet as the chapters within that book. The ConceptMap defines the relationship between concepts, including from one CodeSystem to another. </p>
-<p>You can <a href="https://www.hl7.org/fhir/terminology-module.html">find more information about resources on the HL7 website</a>, including examples and detailed descriptions.</p>
-  <h3>3. Read some common use cases</h3>
-  <P>Some of the most common usages of the terminology service API include:</p>
-    <ul>
-      <li>creating or referencing a code system</li>
-      <li>looking up a display term for a code</li>
-      <li>recording data using pre-existing codes</li>
-      <li>validating a code</li>
-      <li>mapping data between different terminologies</li>
-      </ul>
-      <P><a href="https://www.hl7.org/fhir/usecases.html">Read some common example scenarios in FHIR</a> to see further ways that the API can be used.</p>
-        <p>You may also like to read <a href="https://confluence.ihtsdotools.org/display/CP/Clinical+Use+Cases">examples of SNOMED CT clinical use cases</a> to understand how health and care organisations have implemented terminology services.</p>
-      <h3>4. Know where you can get help</h3>
-      <p>Help is available if you need integration support.</p>
+      <h3>2. Understanding the FHIR API structure</h3>
+      <p>The FHIR API is created from a standard framework of resources. </p>
+      <table class="nhsuk-table">
+  <caption class="nhsuk-table__caption">Types of FHIR API resources</caption>
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Resource
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Definition
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">CodeSystem</td>
+      <td class="nhsuk-table__cell ">A collection of codes also known as ontology or terminology, in this case SNOMED CT</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">ValueSet</td>
+      <td class="nhsuk-table__cell ">A specific subset of codes from the CodeSystem, for example all codes relating to influenza</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">ConceptMap</td>
+      <td class="nhsuk-table__cell ">Defines the relationship between concepts, including from one CodeSystem to another</td>
+    </tr>
+  </tbody>
+</table>
+<p>You can find <a href="https://www.hl7.org/fhir/terminology-module.html">more information about resources and how to use them</a> on the HL7 website, including examples and descriptions.</p>
+<hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+<h3>3. Making API requests</h3>
+<p>You make API requests using operations like <code>$lookup</code>, <code>$expand</code> and <code>$translate</code>, which are specific to each resource. View the <a href="https://www.hl7.org/fhir/operations.html"> full list of available operations</a>.</p>
+      <h4>Expanding a ValueSet</h4>
+      <P>The most common request users have is to search and retrieve specific SNOMED CT codes. You can do this by using the <code>$expand</code> a ValueSet operation.</p>
+        <p>The rules of this operation can be broad, like retrieving all codes related to influenza. They can also be very specific, like retrieving data created on a specific date. </p>
+        <P></p>
+      <p>See some <a href="https://documenter.getpostman.com/view/784165/ontoserver-51-example-fhir-terminology-requests/RW1hhG1S#802a4571-0930-0392-c6b3-7bd068a6dfe3">example <code>$expand</code> requests</a> in action in a Postman environment on the Ontoserver website.</p>
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+  <h3>4. Getting support</h3>
+      <p>If you need integration support, help is available.</p>
       <p>For specific technical questions, you may want to <a href="https://chat.fhir.org/login/">join the FHIR community</a>. This FHIR knowledge-sharing website allows you to search through content posted by other users, and to post your own issues and questions.</p>
-      <p>For more general support with the terminology service, <a href"#">email anne.example@wales.nhs.uk</a>.</p>
+      <p>For more general support with the terminology service, <a href"#">email terminology.service@wales.nhs.uk</a>.</p>
       <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
   Page last reviewed: 23 May 2021</p>
       <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
@@ -118,7 +134,7 @@
             <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
               <span class="nhsuk-pagination__title">Next</span>
               <span class="nhsuk-u-visually-hidden">:</span>
-              <span class="nhsuk-pagination__page">Sample code</span>
+              <span class="nhsuk-pagination__page">Sample API requests</span>
               <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
               </svg>
