@@ -65,18 +65,17 @@
       <h3>1. Requesting access</h3>
         <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>You cannot access the API if you are a 3rd party without an NHS Wales sponsor</p>
-</div>
-        <p>You can request access if you work for NHS Wales or you are a 3rd party with an NHS Wales sponsor. <a href="#">Email terminology.service@wales.nhs.uk with your request</a>, and include:</p>
+  <p>You cannot access the API as a 3rd party if you are not sponsored by an NHS Wales health board</p></div>
+        <p><a href="#">Email terminology.service@wales.nhs.uk to request access</a> and include:</p>
         <ul>
-          <li>which organisation you work at</li>
-          <li>how you plan to use the API, for example that you'd like to retrieve content from the Welsh Data Dictionary</li>
+          <li>which health board you work for or are sponsored by</li>
+          <li>how you plan to use the API, for example you'd like to retrieve content from the Welsh Data Dictionary</li>
           </ul>
       <p>If you are a 3rd party, it can take up to 5 months to go from your initial request to accessing the API, depending on your requirements. The process for organisations within NHS Wales is normally quicker. See an <a href="#">example timescale for accessing APIs*</a>.</p>
       <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 
       <h3>2. Understanding the FHIR API structure</h3>
-      <p>FHIR APIs are created from a standard framework of of components called resources, written in XML, JSON or RDF. Resources are the building blocks of every request.</p>
+      <p>FHIR APIs are created from a standard framework of components called resources. Resources are the building blocks of every request.</p>
       <table class="nhsuk-table">
   <caption class="nhsuk-table__caption">Types of FHIR API resources</caption>
   <thead role="rowgroup" class="nhsuk-table__head">
@@ -112,10 +111,11 @@
   <li>a set of defined data elements</li>
   <li>an extensibility framework to support variation in healthcare</li>
   </ul>
-<p>Get more detailed information in <a href="https://build.fhir.org/overview-dev.html">HL7's FHIR overview for developers</a>, which includes example requests and responses.</p>
+<p>Read more in <a href="https://build.fhir.org/overview-dev.html">HL7's FHIR overview for developers</a>, which includes example requests and responses.</p>
 <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 <h3>3. Making API requests</h3>
-<p>To create actions within these resources, FHIR has a simple set of interactions like <code>READ</code> and <code>UPDATE</code> that follow the RESTful structure. To execute exchanges, you use operations. These are structured by pairing the URL from the FHIR endpoint with the name of an operation, which is prefixed by a dollar symbol ($). For example:
+<p>FHIR APIs have a simple set of interactions like <code>READ</code> and <code>UPDATE</code> that follow the RESTful structure. To actively formulate content inputs and outputs, you use operations.</p>
+<p>Operations are structured by pairing the URL from the FHIR endpoint with the name of an operation, which is prefixed by a dollar symbol ($). For example:
 <p><code>GET http://exampleURL.com/path/ResourceType/id/$operation</code></p>
 <p>Frequently used operations include <code>$lookup</code>, <code>$expand</code> and <code>$translate</code>. View the <a href="https://www.hl7.org/fhir/operations.html"> full list of available operations</a>.</p>
       <h4>Expanding a ValueSet</h4>
