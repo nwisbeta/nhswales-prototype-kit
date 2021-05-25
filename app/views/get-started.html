@@ -62,18 +62,21 @@
       </nav>
 
       <h2>Get started</h2>
-      <h3>1. Registering interest in access</h3>
-      <p>You can make a request to access the terminology service API if:</p>
-      <ul>
-        <li>you work for an NHS Wales health board</li>
-        <li>you are a 3rd party organisation sponsored by an NHS Wales health board</li>
-        </ul>
-        <p><a href="#">Email terminology.service@wales.nhs.uk to register interest</a>. In the email you should tell us the reason for your request, for example that you'd like to use the API to retrieve content from the Welsh Data Dictionary. This will help us to understand the best way to support you.</p>
-      <p>It may take up to 5 months to complete the access and implementation process for 3rd parties.</p>
+      <h3>1. Requesting access</h3>
+        <div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>You cannot access the API if you are a 3rd party without an NHS Wales sponsor</p>
+</div>
+        <p>You can request access if you work for NHS Wales or you are a 3rd party with an NHS Wales sponsor. <a href="#">Email terminology.service@wales.nhs.uk with your request</a>, and include:</p>
+        <ul>
+          <li>which organisation you work at</li>
+          <li>how you plan to use the API, for example that you'd like to retrieve content from the Welsh Data Dictionary</li>
+          </ul>
+      <p>If you are a 3rd party, it can take up to 5 months to go from your initial request to accessing the API, depending on your requirements. The process for organisations within NHS Wales is normally quicker. See an <a href="#">example timescale for accessing APIs*</a>.</p>
       <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 
       <h3>2. Understanding the FHIR API structure</h3>
-      <p>The FHIR API is created from a standard framework of resources. </p>
+      <p>FHIR APIs are created from a standard framework of of components called resources, written in XML, JSON or RDF. Resources are the building blocks of every request.</p>
       <table class="nhsuk-table">
   <caption class="nhsuk-table__caption">Types of FHIR API resources</caption>
   <thead role="rowgroup" class="nhsuk-table__head">
@@ -101,15 +104,25 @@
     </tr>
   </tbody>
 </table>
-<p>You can find <a href="https://www.hl7.org/fhir/terminology-module.html">more information about resources and how to use them</a> on the HL7 website, including examples and descriptions.</p>
+<p>Each resource is structured in the same way, with:</p>
+<ul>
+  <li>a URL that identifies the resource</li>
+  <li>common metadata</li>
+  <li>an XHTML summary</li>
+  <li>a set of defined data elements</li>
+  <li>an extensibility framework to support variation in healthcare</li>
+  </ul>
+<p>Get more detailed information in <a href="https://build.fhir.org/overview-dev.html">HL7's FHIR overview for developers</a>, which includes example requests and responses.</p>
 <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 <h3>3. Making API requests</h3>
-<p>You make API requests using operations like <code>$lookup</code>, <code>$expand</code> and <code>$translate</code>, which are specific to each resource. View the <a href="https://www.hl7.org/fhir/operations.html"> full list of available operations</a>.</p>
+<p>To create actions within these resources, FHIR has a simple set of interactions like <code>READ</code> and <code>UPDATE</code> that follow the RESTful structure. To execute exchanges, you use operations. These are structured by pairing the URL from the FHIR endpoint with the name of an operation, which is prefixed by a dollar symbol ($). For example:
+<p><code>GET http://exampleURL.com/path/ResourceType/id/$operation</code></p>
+<p>Frequently used operations include <code>$lookup</code>, <code>$expand</code> and <code>$translate</code>. View the <a href="https://www.hl7.org/fhir/operations.html"> full list of available operations</a>.</p>
       <h4>Expanding a ValueSet</h4>
-      <P>The most common request users have is to search and retrieve specific SNOMED CT codes. You can do this by using the <code>$expand</code> a ValueSet operation.</p>
-        <p>The rules of this operation can be broad, like retrieving all codes related to influenza. They can also be very specific, like retrieving data created on a specific date. </p>
+      <P>The most common use case for the API is to search and retrieve specific SNOMED CT codes. You can do this using the <code>$expand</code> a ValueSet operation.</p>
+        <p>The rules of this operation can be broad, like retrieving codes related to influenza. They can also be very specific, like retrieving codes related to influenza that were created on a specific date. </p>
         <P></p>
-      <p>See some <a href="https://documenter.getpostman.com/view/784165/ontoserver-51-example-fhir-terminology-requests/RW1hhG1S#802a4571-0930-0392-c6b3-7bd068a6dfe3">example <code>$expand</code> requests</a> in action in a Postman environment on the Ontoserver website.</p>
+      <p>You can <a href="https://documenter.getpostman.com/view/784165/ontoserver-51-example-fhir-terminology-requests/RW1hhG1S#802a4571-0930-0392-c6b3-7bd068a6dfe3">see some example <code>$expand</code> requests</a> in action in a Postman environment on the Ontoserver website.</p>
       <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
   <h3>4. Getting support</h3>
       <p>If you need integration support, help is available.</p>
