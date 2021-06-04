@@ -69,9 +69,9 @@
         <p><a href="#">Email terminology.service@wales.nhs.uk to request access</a> and include:</p>
         <ul>
           <li>which health board you work for or are sponsored by</li>
-          <li>how you plan to use the API, for example you'd like to retrieve content from the Welsh Data Dictionary</li>
+          <li>how you plan to use the API, for example you'd like to retrieve SNOMED CT content</li>
           </ul>
-      <p>If you are a 3rd party, it can take up to 5 months to go from your initial request to accessing the API, depending on your requirements. The process for organisations within NHS Wales is normally quicker. See an <a href="#">example timescale for accessing APIs*</a>.</p>
+      <p>If you are a 3rd party, it may take up to 3 weeks from your initial request to access the API, depending on your requirements. The process for organisations within NHS Wales is normally quicker. See an <a href="#">example timescale for accessing APIs*</a>.</p>
       <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 
       <h3>2. Understanding the FHIR API structure</h3>
@@ -91,11 +91,11 @@
   <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">CodeSystem</td>
-      <td class="nhsuk-table__cell ">A collection of codes also known as ontology or terminology, in this case SNOMED CT</td>
+      <td class="nhsuk-table__cell ">A collection of codes also known as an ontology or terminology</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">ValueSet</td>
-      <td class="nhsuk-table__cell ">A specific subset of codes from the CodeSystem, for example all codes relating to influenza</td>
+      <td class="nhsuk-table__cell ">A specific subset of codes from the CodeSystem</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">ConceptMap</td>
@@ -114,13 +114,13 @@
 <p>Read more in <a href="https://build.fhir.org/overview-dev.html" target="_blank">HL7's FHIR overview for developers (opens in a new tab)</a>, which includes example requests and responses.</p>
 <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 <h3>3. Making API requests</h3>
-<p>FHIR APIs have a simple set of interactions like <code>READ</code> and <code>UPDATE</code> that follow the RESTful structure. To actively formulate content inputs and outputs, you use operations.</p>
+<p>Terminology FHIR APIs have a simple set of interactions like <code>READ</code> and <code>UPDATE</code> that follow the RESTful structure. To actively formulate content inputs and outputs, you use operations.</p>
 <p>Operations are structured by pairing the URL from the FHIR endpoint with the name of an operation, which is prefixed by a dollar symbol ($). For example:
 <p><code>GET http://exampleURL.com/path/ResourceType/id/$operation</code></p>
 <p>Frequently used operations include <code>$lookup</code>, <code>$expand</code> and <code>$translate</code>. View the <a href="https://www.hl7.org/fhir/operations.html" target="_blank"> full list of available operations (opens in a new tab)</a>.</p>
       <h4>Expanding a ValueSet</h4>
       <P>The most common use case for the API is to search and retrieve specific SNOMED CT codes. You can do this using the <code>$expand</code> a ValueSet operation.</p>
-        <p>The rules of this operation can be broad, like retrieving codes related to influenza. They can also be very specific, like retrieving codes related to influenza that were created on a specific date. </p>
+        <p>The rules of this operation can be broad, like retrieving codes related to procedures. They can also be very specific, like retrieving codes for procedures by method. </p>
         <P></p>
       <p>You can <a href="https://documenter.getpostman.com/view/784165/ontoserver-51-example-fhir-terminology-requests/RW1hhG1S#802a4571-0930-0392-c6b3-7bd068a6dfe3" target="_blank">see some example <code>$expand</code> requests (opens in a new tab)</a> in action in a Postman environment on the Ontoserver website.</p>
       <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
