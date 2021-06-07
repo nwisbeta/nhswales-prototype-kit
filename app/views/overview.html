@@ -41,7 +41,7 @@
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
       <p class="nhsuk-lede-text">
-        How to search and read SNOMED CT electronic health record content using a FHIR API
+        How to search and read clinical terminologies like SNOMED CT using a FHIR API
       </p>
       <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
         <h2 class="nhsuk-u-visually-hidden">Contents</h2>
@@ -53,57 +53,81 @@
             <a class="nhsuk-contents-list__link" href="get-started">Get started</a>
           </li>
           <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link" href="fhir">About FHIR APIs</a>
+            <li class="nhsuk-contents-list__item">
+              <a class="nhsuk-contents-list__link" href="snomed">About SNOMED CT</a>
+            </li>
+          <li class="nhsuk-contents-list__item">
             <a class="nhsuk-contents-list__link" href="#">Sample API requests</a>
           </li>
           <li class="nhsuk-contents-list__item">
             <a class="nhsuk-contents-list__link" href="#">Terms of use</a>
-          </li>
+            </li>
         </ol>
       </nav>
 
       <h2>Overview</h2>
 
-      <p>Improving communication between systems is a key part of the <a href="https://gov.wales/healthier-wales-long-term-plan-health-and-social-care" target="_blank">Welsh Government's A Healthier Wales strategy (opens in a new tab)</a>. To improve patient outcomes, systems need to use and understand a shared, standardised language so that care is better joined-up.</p>
-      <P>The terminology service FHIR API enables users to develop applications that interact with clinical terminologies. This lets them retrieve content using a set of national standards that underpin the health record.  </p>
-      <h4>What a terminology service is</h4>
+      <p>To improve patient outcomes, clinical systems need to use and understand a shared, consistent language so that care is more joined-up. </p>
+      <P>The terminology service FHIR API lets you develop applications that interact with clinical terminologies and retrieve content using a set of national standards that underpin the health record.  </p>
+      <h3>About the terminology service</h3>
+      <p>The terminology service is part of the <a href="">National Data Resource (NDR) programme (opens in a new tab)</a>. It is playing an important role in the digital transformation agenda for NHS Wales, using an open platform approach to digital innovation by publishing national standards for how software and technologies work together. </P>
       <p>The way that electronic healthcare records are written and stored can differ between care settings. This makes it difficult to share content quickly and accurately from one clinical system to another.</p>
-      <p>A terminology service gives that content structure. It assigns unique codes to information like symptoms, medications and procedures to form a consistent clinical terminology that can be processed by any system. For example, one clinician might record a diagnosis as 'influenza', and another might record it as 'flu'. A terminology service translates those synonyms into one code that can be understood by both computers and clinicians.</p>
-      <p>We use the SNOMED CT clinical terminology as an information standard at NHS Wales, as mandated by the Welsh Government's <a href="https://gov.wales/sites/default/files/publications/2019-08/introduction-of-snomed-ct-as-an-information-standard-in-nhs-wales.pdf" target="_blank">2015 Data Standards Change Notice health circular (opens in a new tab)</a>.</p>
-      <P>Other terminologies that we use include:</p>
+      <p>The terminology service gives that content structure. It assigns unique codes to information like symptoms, medications and procedures to form a consistent clinical terminology that can be processed by any system. For example, one clinician might record a diagnosis as 'influenza', and another might record it as 'flu'. A terminology service translates those synonyms into one code that can be understood by both computers and clinicians.</p>
+      <h3>SNOMED CT is our standard terminology</h3>
+      <p>We are using  SNOMED CT as our standard clinical terminology across NHS Wales. The <a href="a href="https://gov.wales/sites/default/files/publications/2019-08/introduction-of-snomed-ct-as-an-information-standard-in-nhs-wales.pdf" target="_blank"> adoption of SNOMED CT a part of ministerial policy (opens in a new tab)</a> was confirmed in 2015 by the Minister for Health & Social Services.</p>
+      <P>Other terminologies and classifications that we use include:</p>
         <ul>
-          <li>LOINC, a standard for health measurements, observations and documents</li>
-          <li>NICIP, example</li>
-          <li>ICD-10, example</li>
-          <li>OPCS, example</li>
+          <li><a href="https://loinc.org/" target="_blank">LOINC (opens in a new tab)</a>, or Logical Observation Identifiers Names and Codes, a standard for health measurements, observations, and documents</li>
+          <li><a href="https://digital.nhs.uk/services/terminology-and-classifications/national-interim-clinical-imaging-procedure-nicip-code-set" target="blank">NICIP (opens in a new tab)</a>, or National Interim Clinical Imaging Procedure, a standard for procedures and direct commissioning of services</li>
+          <li><a href="https://nwis.nhs.wales/information-services/information-standards/clinical-classifications-and-terminology-standards/clinical-classifications-and-terminologies-standards-doc/icd-10-essentials-document-pdf/">ICD-10 (opens in a new tab)</a>, or International Classification of Diseases 10, a classification of diseases, clinical documentation, and statistical aggregation</li>
+          <li><a href="https://datadictionary.nhs.uk/supporting_information/opcs_classification_of_interventions_and_procedures.html">OPCS (opens in a new tab)</a>, a classification of interventions and procedures</li>
           </ul>
 
-        <h3>About SNOMED CT</h3>
-        <p>Used by healthcare services worldwide, SNOMED CT is one of the most comprehensive clinical terminologies available. Its vocabulary is precise, clinically validated, and can be updated in real time to capture emerging health issues.</p>
-        <p>SNOMED CT content is rigorously controlled, which offers improved opportunities for real-time decision making and accurate reporting. Read more about <a href="https://www.snomed.org/snomed-ct/why-snomed-ct" target="_blank">the benefits of using SNOMED CT (opens in a new tab)</a>. </p>
-        <p>This edition of SNOMED CT contains extensions specific to the UK, including clinical terms, screening procedures and British English spellings.</p>
+
+          <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="get-started">Get started</a>
+              </h2>
+              <p class="nhsuk-card__description">Learn how to access and integrate with the API</p>
+            </div>
+          </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="snomed">About SNOMED CT</a>
+              </h2>
+              <p class="nhsuk-card__description">Read more about the terminology</p>
+            </div>
+          </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="fhir">About FHIR APIs</a>
+              </h2>
+              <p class="nhsuk-card__description">Read how to create requests with resources</p>
+            </div>
+          </div>
+
+        </li>
+      </ul>
 
 
-      <h3>About FHIR APIs</h3>
 
-      <p>Fast Healthcare Interoperability Resources (FHIR) is a standard for quickly and accurately transferring healthcare data between systems. FHIR features components called resources that can be used to define terminologies, as well as clear specifications for presenting terminologies.</p>
-      <p>Working to this standard framework means that data can be shared more consistently wherever patient care is taking place. Read <a href="https://digitalhealth.wales/news/fhir-interoperability-wales" target="_blank">how NHS Wales is working with FHIR APIs (opens in a new tab)</a>.</p>
-      <p>FHIR is free to use, and designed to be easy to understand and implement. You can find detailed <a href="http://hl7.org/fhir/summary.html" target="_blank"> information about FHIR specifications (opens in a new tab)</a> on the HL7 website.</p>
-      <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
-  Page last reviewed: 23 March 2021</p>
-      <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
-        <ul class="nhsuk-list nhsuk-pagination__list">
-                    <li class="nhsuk-pagination-item--next">
-            <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="get-started">
-              <span class="nhsuk-pagination__title">Next</span>
-              <span class="nhsuk-u-visually-hidden">:</span>
-              <span class="nhsuk-pagination__page">Get started</span>
-              <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
+
+
       <!-- End of content -->
 
     </div>

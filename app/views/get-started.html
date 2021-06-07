@@ -41,7 +41,7 @@
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
       <p class="nhsuk-lede-text">
-        How to search and read SNOMED CT electronic health record content using a FHIR API
+        How to search and read clinical terminologies like SNOMED CT using a FHIR API
       </p>
       <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
         <h2 class="nhsuk-u-visually-hidden">Contents</h2>
@@ -49,112 +49,60 @@
           <li class="nhsuk-contents-list__item" aria-current="page">
             <a class="nhsuk-contents-list__link" href="overview">Overview</a>
           </li>
+        <li class="nhsuk-contents-list__item">
+          <span class="nhsuk-contents-list__current">Get started</span>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link" href="fhir">About FHIR APIs</a>
           <li class="nhsuk-contents-list__item">
-            <span class="nhsuk-contents-list__current">Get started</span>
+            <a class="nhsuk-contents-list__link" href="snomed">About SNOMED CT</a>
           </li>
-          <li class="nhsuk-contents-list__item">
-            <a class="nhsuk-contents-list__link" href="#">Sample API requests</a>
-          </li>
-          <li class="nhsuk-contents-list__item">
-            <a class="nhsuk-contents-list__link" href="#">Terms of use</a>
-          </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link" href="#">Sample API requests</a>
+        </li>
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link" href="#">Terms of use</a>
+        </li>
         </ol>
       </nav>
 
       <h2>Get started</h2>
-      <h3>1. Requesting access</h3>
+      <h3>1. Ask for access</h3>
         <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>You cannot access the API as a 3rd party if you are not sponsored by an NHS Wales health board</p></div>
-        <p><a href="#">Email terminology.service@wales.nhs.uk to request access</a> and include:</p>
-        <ul>
-          <li>which health board you work for or are sponsored by</li>
-          <li>how you plan to use the API, for example you'd like to retrieve SNOMED CT content</li>
-          </ul>
-      <p>If you are a 3rd party, it may take up to 3 weeks from your initial request to access the API, depending on your requirements. The process for organisations within NHS Wales is normally quicker. See an <a href="#">example timescale for accessing APIs*</a>.</p>
-      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+  <p>You must work for NHS Wales or be sponsored by an NHS Wales health board to access this API </p></div>
+        <p><b>>Content pending<</b></p>
 
-      <h3>2. Understanding the FHIR API structure</h3>
-      <p>FHIR APIs are created from a standard framework of components called resources. Resources are the building blocks of every request.</p>
-      <table class="nhsuk-table">
-  <caption class="nhsuk-table__caption">Types of FHIR API resources</caption>
-  <thead role="rowgroup" class="nhsuk-table__head">
-    <tr role="row">
-      <th role="columnheader" class="" scope="col">
-        Resource
-      </th>
-      <th role="columnheader" class="" scope="col">
-        Definition
-      </th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr role="row" class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">CodeSystem</td>
-      <td class="nhsuk-table__cell ">A collection of codes also known as an ontology or terminology</td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">ValueSet</td>
-      <td class="nhsuk-table__cell ">A specific subset of codes from the CodeSystem</td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">ConceptMap</td>
-      <td class="nhsuk-table__cell ">Defines the relationship between concepts, including from one CodeSystem to another</td>
-    </tr>
-  </tbody>
-</table>
-<p>Each resource is structured in the same way, with:</p>
-<ul>
-  <li>a URL that identifies the resource</li>
-  <li>common metadata</li>
-  <li>an XHTML summary</li>
-  <li>a set of defined data elements</li>
-  <li>an extensibility framework to support variation in healthcare</li>
-  </ul>
-<p>Read more in <a href="https://build.fhir.org/overview-dev.html" target="_blank">HL7's FHIR overview for developers (opens in a new tab)</a>, which includes example requests and responses.</p>
+      <h3>2. Get to know the FHIR API structure</h3>
+      <p>FHIR APIs are created from a standard framework of components called resources that are designed to be easy to implement. Resources are the building blocks of every request.</p>
+<div class="nhsuk-action-link">
+        <a class="nhsuk-action-link__link" href="fhir#fhir-api-resources">
+          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+          </svg>
+          <span class="nhsuk-action-link__text">Read our guide to working with FHIR API resources</span>
+        </a>
 <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
-<h3>3. Making API requests</h3>
-<p>Terminology FHIR APIs have a simple set of interactions like <code>READ</code> and <code>UPDATE</code> that follow the RESTful structure. To actively formulate content inputs and outputs, you use operations.</p>
-<p>Operations are structured by pairing the URL from the FHIR endpoint with the name of an operation, which is prefixed by a dollar symbol ($). For example:
-<p><code>GET http://exampleURL.com/path/ResourceType/id/$operation</code></p>
-<p>Frequently used operations include <code>$lookup</code>, <code>$expand</code> and <code>$translate</code>. View the <a href="https://www.hl7.org/fhir/operations.html" target="_blank"> full list of available operations (opens in a new tab)</a>.</p>
-      <h4>Expanding a ValueSet</h4>
-      <P>The most common use case for the API is to search and retrieve specific SNOMED CT codes. You can do this using the <code>$expand</code> a ValueSet operation.</p>
-        <p>The rules of this operation can be broad, like retrieving codes related to procedures. They can also be very specific, like retrieving codes for procedures by method. </p>
-        <P></p>
-      <p>You can <a href="https://documenter.getpostman.com/view/784165/ontoserver-51-example-fhir-terminology-requests/RW1hhG1S#802a4571-0930-0392-c6b3-7bd068a6dfe3" target="_blank">see some example <code>$expand</code> requests (opens in a new tab)</a> in action in a Postman environment on the Ontoserver website.</p>
+<h3>3. Learn about operations</h3>
+<p>Terminology FHIR APIs have a simple set of interactions like <code>READ</code> and <code>UPDATE</code> that follow a RESTful structure. This is extended by operations, which you use to actively formulate inputs and outputs.</p>
+<div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="fhir#operations">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">Read our guide to making requests with FHIR API operations</span>
+  </a>
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <h3>4. Try making a request</h3>
+      <P><b>>Content pending<</b>
       <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
-  <h3>4. Getting support</h3>
-      <p>If you need integration support, help is available.</p>
+  <h3>5. Get support if you need it</h3>
       <p>For specific technical questions, you may want to <a href="https://chat.fhir.org/login/" target="_blank">join the FHIR community (opens in a new tab)</a>. This FHIR knowledge-sharing website allows you to search through content posted by other users, and to post your own issues and questions.</p>
-      <p>For more general help with the terminology service, <a href"#">email terminology.service@wales.nhs.uk for support</a>.</p>
-      <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
-  Page last reviewed: 23 May 2021</p>
-      <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
-        <ul class="nhsuk-list nhsuk-pagination__list">
-    <li class="nhsuk-pagination-item--previous">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="/overview">
-        <span class="nhsuk-pagination__title">Previous</span>
-        <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">Overview</span>
-        <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
-        </svg>
-      </a>
-    </li>
-        <ul class="nhsuk-list nhsuk-pagination__list">
-                    <li class="nhsuk-pagination-item--next">
-            <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
-              <span class="nhsuk-pagination__title">Next</span>
-              <span class="nhsuk-u-visually-hidden">:</span>
-              <span class="nhsuk-pagination__page">Sample API requests</span>
-              <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <p>For general support with the terminology service, <a href="mailto:nationalreferencedata@wales.nhs.uk">email nationalreferencedata@wales.nhs.uk for help</a>.</p>
+
       <!-- End of content -->
 
     </div>
