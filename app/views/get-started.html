@@ -67,39 +67,109 @@
       </nav>
 
       <h2>Get started</h2>
-      <h3>1. Ask for access</h3>
-        <div class="nhsuk-inset-text">
-  <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>You must work for NHS Wales or be sponsored by an NHS Wales health board to access this API </p></div>
-        <p><b>>Content pending<</b></p>
+      <h3>Request access</h3>
+        <p>The environments that you can request access to include:</p>
+        <ul>
+          <li>sandbox, to develop a feature that uses the API</li>
+            <li>SIT, for validating the application against integration testing requirements.</li>
+          <li>UAT, for application end users to test the new feature in a non-production environment (if required)</li>
+          <li>production, for pilot and go-live of your application</li></ul>
+          <p>Anyone can try the APIs in the sandbox to see how they work. However, you must work for NHS Wales or be sponsored by an NHS Wales organisation to get production access. </p>
+<div class="nhsuk-expander-group">
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Get Sandbox access (all users)
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Use the sandbox environment to develop a feature that uses the API.</p>
+        <p>To get access:</p>
+        <ol>
+          <li> <a href="#">Register for an NHS Wales Developer Portal account</a></li>
+          <li> Get a subscription key</li>
+          </ol>
 
-      <h3>2. Get to know the FHIR API structure</h3>
-      <p>FHIR APIs are created from a standard framework of components called resources that are designed to be easy to implement. Resources are the building blocks of every request.</p>
-<div class="nhsuk-action-link">
-        <a class="nhsuk-action-link__link" href="fhir#fhir-api-resources">
-          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-          </svg>
-          <span class="nhsuk-action-link__text">Read our guide to working with FHIR API resources</span>
-        </a>
-<hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
-<h3>3. Learn about operations</h3>
-<p>Terminology FHIR APIs have a simple set of interactions like <code>READ</code> and <code>UPDATE</code> that follow a RESTful structure. This is extended by operations, which you use to actively formulate inputs and outputs.</p>
-<div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="fhir#operations">
-    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-    </svg>
-    <span class="nhsuk-action-link__text">Read our guide to making requests with FHIR API operations</span>
-  </a>
+      </div>
+    </details>
+
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Get SIT, UAT and production access (health boards and 3rd party partners)
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p><a href="#">Submit a production access request</a> when you're ready to go live with your application. SIT and UAT access is given first, and used to make sure your application meets our assurance criteria. Production access will be provided once your application passes assurance checks.</p>
+          <p>To get access:</p>
+        <ol>
+          <li> <a href="#">Fill in and submit a New Service Request</a> to request access to the API.</li>
+          <li> Your request will be reviewed by the Service Portfolio CAB for approval or rejection.</li>
+          <li> Submit a ServicePoint call to National Operational Databases (NOD).</li>
+          <li> Request goes to IRAT SMB where it is approved or denied.</li>
+          <li> If approved, you're given connection details. If denied, you're given the reason why.</li></ol>
+
+      </div>
+    </details>
+
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Get SIT, UAT and production access (DHCW application teams)
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p><a href="#">Submit a production access request</a> when you're ready to go live with your application. SIT and UAT access is given first, and used to make sure your application meets our assurance criteria. Production access will be provided once your application passes assurance checks.</p>
+        <p>To get access:</p>
+        <ol>
+          <li> Submit a ServicePoint call to National Operational Databases (NOD).</li>
+          <li> Request goes to IRAT SMB where it is approved or denied.</li>
+          <li> If approved, you're given connection details. If denied, you're given the reason why.</li>
+        </ol>
+
+      </div>
+    </details>
+
+  </div>
+
     <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 
-    <h3>4. Try making a request</h3>
+      <h3>If you're new to FHIR APIs</h3>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="fhir#fhir-api-resources">About FHIR API resources</a>
+        </h2>
+        <p class="nhsuk-card__description">A quick guide to resources, which are the building blocks of every FHIR API request.</p>
+
+      </div>
+    </div>
+
+  </li>
+  <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="fhir#operations">About FHIR API operations</a>
+        </h2>
+        <p class="nhsuk-card__description">Learn how the RESTful structure is extended by operations, which are used to formulate responses.</p>
+      </div>
+    </div>
+
+  </li>
+</ul>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <h3>Try making a request</h3>
+
       <P><b>>Content pending<</b>
       <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
-  <h3>5. Get support if you need it</h3>
+  <h3>Get support</h3>
       <p>For specific technical questions, you may want to <a href="https://chat.fhir.org/login/" target="_blank">join the FHIR community (opens in a new tab)</a>. This FHIR knowledge-sharing website allows you to search through content posted by other users, and to post your own issues and questions.</p>
       <p>For general support with the terminology service, <a href="mailto:nationalreferencedata@wales.nhs.uk">email nationalreferencedata@wales.nhs.uk for help</a>.</p>
 
