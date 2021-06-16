@@ -185,7 +185,7 @@
 
 </div>
 <br></br>
-<h2>Example request</h2>
+<h2>Request</h2>
 
 <div class="nhsuk-card">
   <div class="nhsuk-card__content">
@@ -201,7 +201,23 @@
   Send request
 </button>
 
+<h2>Response</h2>
 
+<div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+    <p><b>HTTP</b></p>
+    <p><code>HTTP/1.1 401 Unauthorized
+<br>content-length: 152
+<br>content-type: application/json
+<br>vary: Origin<
+<br>www-authenticate: AzureApiManagementKey realm="https://sandbox.api.nhs.wales/wrds/fhir-terminology",name="Ocp-Apim-Subscription-Key",type="header"
+
+<br>{
+    <br>"statusCode": 401,
+    <br>"message": "Access denied due to missing subscription key. Make sure to include subscription key when making requests to an API."
+<br>}</code></p>
+  </div>
+</div>
 
 
 {% endblock %}

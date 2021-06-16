@@ -60,34 +60,31 @@
         <li class="nhsuk-contents-list__item">
           <a class="nhsuk-contents-list__link" href="example-api-requests">Example API requests</a>
         </li>
-        <li class="nhsuk-contents-list__item">
-          <a class="nhsuk-contents-list__link" href="#">Terms of use</a>
-        </li>
         </ol>
       </nav>
 
       <h2>Get started</h2>
       <h3>Request access</h3>
-        <p>The environments that you can request access to include:</p>
+        <p>Environments you can request access to include:</p>
         <ul>
           <li>sandbox, to develop a feature that uses the API</li>
-            <li>SIT, for validating the application against integration testing requirements.</li>
-          <li>UAT, for application end users to test the new feature in a non-production environment (if required)</li>
+            <li>system integration testing (SIT), to validate an application against integration testing requirements</li>
+          <li>user acceptance testing (UAT), for application end users to test a new feature in a non-production environment (if required)</li>
           <li>production, for pilot and go-live of your application</li></ul>
-          <p>Anyone can try the APIs in the sandbox to see how they work. However, you must work for NHS Wales or be sponsored by an NHS Wales organisation to get production access. </p>
+          <p>Anyone can try the APIs in the sandbox to see how they work. You must work for NHS Wales or be sponsored by an NHS Wales organisation to get SIT, UAT and production access. </p>
 <div class="nhsuk-expander-group">
     <details class="nhsuk-details nhsuk-expander">
       <summary class="nhsuk-details__summary">
         <span class="nhsuk-details__summary-text">
-          Get Sandbox access (all users)
+          Get sandbox access (all users)
         </span>
       </summary>
       <div class="nhsuk-details__text">
         <p>Use the sandbox environment to develop a feature that uses the API.</p>
         <p>To get access:</p>
         <ol>
-          <li> <a href="#">Register for an NHS Wales Developer Portal account</a></li>
-          <li> Get a subscription key</li>
+          <li> <a href="https://developer.nhs.wales/signup" target="_blank">Register for an NHS Wales Developer Portal account (opens in a new tab)</a>.</li>
+          <li> Get a subscription key.</li>
           </ol>
 
       </div>
@@ -100,14 +97,14 @@
         </span>
       </summary>
       <div class="nhsuk-details__text">
-        <p><a href="#">Submit a production access request</a> when you're ready to go live with your application. SIT and UAT access is given first, and used to make sure your application meets our assurance criteria. Production access will be provided once your application passes assurance checks.</p>
+        <p><a href="#">Submit a production access request</a> when you're ready to go live with your application. SIT and UAT access is given first. This is used to make sure your application meets our assurance criteria. Production access will be provided once your application passes assurance checks.</p>
           <p>To get access:</p>
         <ol>
           <li> <a href="#">Fill in and submit a New Service Request</a> to request access to the API.</li>
           <li> Your request will be reviewed by the Service Portfolio CAB for approval or rejection.</li>
           <li> Submit a ServicePoint call to National Operational Databases (NOD).</li>
-          <li> Request goes to IRAT SMB where it is approved or denied.</li>
-          <li> If approved, you're given connection details. If denied, you're given the reason why.</li></ol>
+          <li> Your request goes to IRAT SMB where it is approved or denied.</li>
+          <li> If approved, we will give you connection details. If denied, we will tell you why.</li></ol>
 
       </div>
     </details>
@@ -119,12 +116,12 @@
         </span>
       </summary>
       <div class="nhsuk-details__text">
-        <p><a href="#">Submit a production access request</a> when you're ready to go live with your application. SIT and UAT access is given first, and used to make sure your application meets our assurance criteria. Production access will be provided once your application passes assurance checks.</p>
+        <p><a href="#">Submit a production access request</a> when you're ready to go live with your application. SIT and UAT access is given first. This is used to make sure your application meets our assurance criteria. Production access will be provided once your application passes assurance checks.</p>
         <p>To get access:</p>
         <ol>
           <li> Submit a ServicePoint call to National Operational Databases (NOD).</li>
-          <li> Request goes to IRAT SMB where it is approved or denied.</li>
-          <li> If approved, you're given connection details. If denied, you're given the reason why.</li>
+          <li> Your request goes to IRAT SMB where it is approved or denied.</li>
+          <li> If approved, we will give you connection details. If denied, we will tell you why.</li><
         </ol>
 
       </div>
@@ -156,7 +153,7 @@
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
           <a class="nhsuk-card__link" href="fhir#operations">About FHIR API operations</a>
         </h2>
-        <p class="nhsuk-card__description">Learn how the RESTful structure is extended by operations, which are used to formulate responses.</p>
+        <p class="nhsuk-card__description">Learn how the RESTful structure is extended by operations, which are used to create requests.</p>
       </div>
     </div>
 
@@ -167,7 +164,8 @@
 
     <h3>Try making a request</h3>
 
-      <P><b>>Content pending<</b>
+      <p>The most common terminology service API request is <code>ValueSet/$expand</code>. <a href="example-api-requests" target="_blank">Read a <code>ValueSet/$expand</code> use case and try an example request (opens in a new tab)</a>.</p>
+      <p>You can also <a href="https://developer.nhs.wales/api-details#api=wrds-fhir-terminology&operation=get-codesystem" target="_blank">try other example requests in the developer portal (opens in a new tab)</a>, such as <code>CodeSystem</code> and <code>ConceptMap</code>.</p>
       <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
   <h3>Get support</h3>
       <p>For specific technical questions, you may want to <a href="https://chat.fhir.org/login/" target="_blank">join the FHIR community (opens in a new tab)</a>. This FHIR knowledge-sharing website allows you to search through content posted by other users, and to post your own issues and questions.</p>
