@@ -1,0 +1,148 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Terminology services
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="dev-homepage">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back</a>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <!-- Change the page title here -->
+      <h1>
+      Get started
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p class="nhsuk-lede-text">
+        Learn about our APIs and how you can use them.</p>
+        <div class="nhsuk-inset-text">
+    <span class="nhsuk-u-visually-hidden">Information: </span>
+    <p>We have not translated this content into Welsh because it is not intended for patients or the public. <a href="#">Read more in our Welsh standards</a>.</p>
+  </div>
+    <h2>About the developer portal</h2>
+        <p>This site is for application developers working on integrations with and within NHS Wales.</p>
+        <p>Here you'll find technical guidance on how to interact with key systems using APIs.</P>
+        <p>Such information can be hard to obtain as it mostly spread across separate documents, in different formats, and often only available on request.</p>
+        <p>Our aim is to make that information available within a single "Developer Portal", in a format that's easy to read, navigate and find via an internet search.</p>
+        <p>This site is currently in "Beta", which means things might change (and/or break) but it also means we'd love your feedback, so feel free to get in touch [link to feedback form?].</p>
+        <p>The site is maintained by a team at Digital Health and Care Wales as part of the Digital Health Ecosystem Wales programme.</p>
+      <p>Although anybody is free to browse the content on this site, it is currently only intended for:</p>
+        <ul>
+        <li>NHS Wales development teams</li>
+        <li>Development teams contracted to integrate with NHS Wales systems</li>
+        </ul>
+        <p>If you're interested in how you can partner with NHS Wales, then the team at Digital Health Ecosystem Wales  provide resources and events that you may find useful.</p>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+    <h2>How NHS Wales uses APIs</h2>
+    <h3>Overview of the architecture</h3>
+    <p>Section 8.1.1 and 8.1.2 (p38-39) of the API Management Evaluation Report </p>
+    <h3>Diagram showing example message flows and systems</h3>
+    <p>Slide 7 of the NDR Tech Webinar slides </p>
+    <h3>Highlight of key systems</h3>
+    <p>https://nwisbeta.github.io/open-architecture/docs/getting-started/key-services/ </p>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+     <h2>Our API technologies and standards</h2>
+     <h3>SOAP/XML</h3>
+     <p>The APIs used to access many NHS Wales national systems are SOAP Web Services.</p>
+     <p>SOAP APIs use XML to format the message and HTTP to send it.</p>
+     <p>Ref: https://www.w3.org/TR/soap/ </p>
+     <p>WSDL documents are used to provide a machine readable definition of SOAP APIs</p>
+     <p>https://www.w3.org/TR/2001/NOTE-wsdl-20010315 </p>
+     <p>If you need to connect to system using SOAP API, you'll usually use a tool that automatically generates the client code for you based on the WSDL.</p>
+
+     <h3>Data Standards and HL7</h3>
+     <p>The way that data is structured differs between systems, but there are some common standards in use.</p>
+     <p>The Welsh GP Record API and the Welsh Clinical Communications Gateway (WCCG) use locally defined standards for representing health record information.</p>
+     <p>Other systems, like the Master Patient Index and the Welsh Lab Information Management System (WLIMS) use the HL7 v2  message structures for their APIs.</p>
+     <p>The Master Patient Index API also conforms to the IHE Profile for performing Patient Demographic Queries and Patient Identifier Cross-Reference operations.</p>
+
+     <h3>FHIR and OpenEHR</h3>
+     <p>HL7 FHIR and OpenEHR are modern standards for healthcare systems.</p>
+     <p>FHIR is a standard for communication between systems. It defines structures for common data entities (e.g Patient, CarePlan) and an API. The core standard aims to cater for 80% of use cases, with options to extend and customise definitions for other use cases.</p>
+     <p>OpenEHR is a separate initiative that publishes their own data definitions and several API specifications for use in healthcare, but additionally define models for data persistence in the underlying system.</p>
+     <p>If it helps you can think of FHIR a bit like a standard for the USB port (so you can easily plug in anything you want to), but OpenEHR is more like a standard for how the whole computer should work (so you can easily add an extra RAM stick or a video card AND plug things in to the Thunderbolt port).</p>
+     <p>A few systems in NHS Wales use these standards, e.g. Terminology Server (FHIR), new Clinical Data Repository (OpenEHR) and you can expect that all new systems are likely to provide an API that conforms to one of these two standards.</p>
+
+     <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <h2>Explore APIs</h2>
+    <p>Here are the APIs. You can read about them in their user guides and technical documentation.</p>
+    <p>Technical documentation - explain under what circumstances somebody can request the English only content in Welsh and how they can request it.</p>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <h2>Try APIs in the sandbox</h2>
+      <p>Alongside the technical documentation, we also provide sandbox versions of some key APIs. Developers can use the sandbox environment to "play around" with the APIs, learn how to use them and start developing an integration.</p>
+      <p>You can request access to the Sandbox APIs using this site [subscribe to sandbox link]</p>
+      <p>Find out more about requesting access to APIs.</P>
+    <h3>*to move* Requesting access to APIs</h3>
+      <p>After trying features in the sandbox, you can request access to:</p>
+      <ul>
+        <li>system integration testing (SIT), to validate an application against integration testing requirements</li>
+        <li>user acceptance testing (UAT), for application end users to test a new feature in a non-production environment (if required)</li>
+        <li>production environment, for pilot and go-live of your application</li>
+        </ul>
+    <h3>The assurance process</h3>
+      <p>This is a series of checks to make sure that your use case for the API meets with our standards.</p>
+      <p>The assurance process depends upon the API you're requesting access to. Find the API you'd like to access in the <a href=#>API catalogue</a> and read its technical documentation to learn more.</p>
+      <p>If the API does not have information about its assurance process, <a href="#">contact us by email</a>.</p>
+      <p>Production access will be provided once your application passes assurance checks.</p>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+      <h2>Welsh language requirements</h2>
+      <h3>Content we provide in Welsh</h3>
+      <p>Reiterate why not all our content is available in Welsh (because it's specific technical audience not patient facing).</p>
+      <h3>What you should provide when creating apps for Welsh patients and public</h3>
+      <p>Clearly explain when app developers need to provide their app in Welsh (if it's patient facing).</p>
+      <h3>Requesting content in Welsh for the tender process</h3>
+      <p>Reiterate under what circumstances somebody can request the English only content in Welsh and how they can request it.</p>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+        <h2>Get help and support</h2>
+        <p>For specific technical questions, you may want to <a href="https://chat.fhir.org/login/" target="_blank">join the FHIR community (opens in a new tab)</a>. This FHIR knowledge-sharing website allows you to search through content posted by other users, and to post your own issues and questions.</p>
+        <p>For general support with the terminology service, <a href="mailto:nationalreferencedata@wales.nhs.uk">email nationalreferencedata@wales.nhs.uk for help</a>.</p>
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,223 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Terminology services
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+<h1>Try a ValueSet/$expand request</h1>
+<P>Complete the fields to create the example request.</p>
+<h2>Authorisation</h2>
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="example">
+    Subscription key
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+<br></br>
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+    <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+      <h1 class="nhsuk-fieldset__heading">
+        Parameters
+      </h1>
+    </legend>
+    <div class="nhsuk-hint" id="example-hint">
+      For example, parameter: <code>count</code> and value: <code>10</code>
+    </div>
+    <div class="nhsuk-date-input" id="example">
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+            Parameter
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-6" id="example" name="example" type="text">
+        </div>
+        </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+            Value
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-6" id="example" name="example" type="text">
+        </div>
+    </div>
+    </div>
+  </fieldset>
+</div>
+<p><a href="#">+ Add parameter</a></p>
+<br></br>
+
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+    <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+      <h1 class="nhsuk-fieldset__heading">
+        Headers
+      </h1>
+    </legend>
+    <div class="nhsuk-hint" id="example-hint">
+      For example, header: <code>cache-control</code> and value: <code>no-cache</code>
+    </div>
+    <div class="nhsuk-date-input" id="example">
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+            Header
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-6" id="example" name="example" type="text">
+        </div>
+        </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+            Value
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-6" id="example" name="example" type="text">
+        </div>
+    </div>
+    </div>
+  </fieldset>
+</div>
+<p><a href="#">+ Add header</a></p>
+<br></br>
+<div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        Language
+      </h1>
+    </legend>
+
+      <div class="nhsuk-radios nhsuk-radios--inline">
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          HTTP
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+          Curl
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          C#
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          Java
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          JavaScript
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          PHP
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          Python
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          Ruby
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          Objective C
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+</div>
+<br></br>
+<h2>Request</h2>
+
+<div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+    <p><b>HTTP</b></p>
+    <p><code>GET https://sandbox.api.nhs.wales/wrds/fhir-terminology/ValueSet/$expand?url=http%3A%252F%252Fsnomed.info%252Fsct%253Ffhir_vs
+      &count=10 HTTP/1.1</code>
+
+    <p><code>Cache-Control: no-cache</code></p>
+  </div>
+</div>
+
+<button class="nhsuk-button" type="submit">
+  Send request
+</button>
+
+<h2>Response</h2>
+
+<div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+    <p><b>HTTP</b></p>
+    <p><code>HTTP/1.1 401 Unauthorized
+<br>content-length: 152
+<br>content-type: application/json
+<br>vary: Origin<
+<br>www-authenticate: AzureApiManagementKey realm="https://sandbox.api.nhs.wales/wrds/fhir-terminology",name="Ocp-Apim-Subscription-Key",type="header"
+
+<br>{
+    <br>"statusCode": 401,
+    <br>"message": "Access denied due to missing subscription key. Make sure to include subscription key when making requests to an API."
+<br>}</code></p>
+  </div>
+</div>
+
+
+{% endblock %}

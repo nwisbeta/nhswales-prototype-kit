@@ -1,0 +1,82 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Terminology services
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/dev-homepage">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back</a>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+
+      <!-- Change the page title here -->
+      <h1>
+      My account
+      </h1>
+      <div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2 class="nhsuk-heading-l">Manage account</h2>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-quarter">
+        <p><b>Email</b>
+        <br><b>First name</b>
+        <br><b>Last name</b>
+        <br><b>Registration date</b></p>
+      </div>
+      <div class="nhsuk-grid-column-one-third">
+        <p>emma.lynham@wales.nhs.uk
+          <br>
+          Emma
+          <br>
+          Lynham
+          <br>
+          14 May 2021</p>
+              </div>
+
+              <div class="nhsuk-grid-column-one-quarter">
+                <p><a href=#>Update email</a>
+                  <br><a href=#>Update name</a></p>
+                      </div>
+    </div>
+    <div class="nhsuk-u-padding-bottom-6"></div>
+
+<h2 class="nhsuk-heading-m">Close account</h2>
+<p>You will not be able to restore your account once it has been closed. You will need to register a new account.</p>
+<button class="nhsuk-button nhsuk-button--secondary" type="submit">
+  Close my account
+</button>
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+
+{% endblock %}

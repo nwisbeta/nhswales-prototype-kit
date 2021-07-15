@@ -1,0 +1,242 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Terminology services
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/dev-homepage">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back</a>
+</div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+
+        <div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper " id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+
+        <h1>
+        API catalogue
+        </h1>
+
+<p class="nhsuk-body-l">See our Live APIs, test out our Experimental APIs, and try a mock live environment with our Sandbox APIs.</p>
+<p>.</p>
+          <div class="nhsuk-header__search">
+        <button class="nhsuk-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
+          <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+          </svg>
+          <span class="nhsuk-u-visually-hidden">Search NHS Wales APIs</span>
+        </button>
+        <div class="nhsuk-header__search-wrap" id="wrap-search">
+          <form class="nhsuk-header__search-form" id="search" action="https://www.nhs.uk/search/" method="get" role="search">
+            <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
+            <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search APIs" autocomplete="off">
+            <button class="nhsuk-search__submit" type="submit">
+              <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Search NHS Wales APIs</span>
+            </button>
+            <button class="nhsuk-search__close" id="close-search">
+              <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Close search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      </div>
+
+
+
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+
+
+
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="#">Audit Logging</a>
+              </h2>
+            <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
+              <p class="nhsuk-card__description"><b>Central Audit Service (CAS)</b></p>
+              <p>Write pre-defined audit events for AC3 users that are compliant with audit requirements and make audit logs available to other systems.</p>
+            </div>
+          </div>
+
+        </li>
+
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="#">Address Matching</a>
+              </h2>
+              <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
+              <p class="nhsuk-card__description"><b>Welsh Address Matching Service (WAMS)</b></p>
+              <p>Search for addresses in the nationally approved address list, standardising manually entered addresses to be consistent with other systems</p>
+            </div>
+          </div>
+          </li>
+
+
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link" href="#">Birth Notifications</a>
+                  </h2>
+                  <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
+                  <p class="nhsuk-card__description"><b>Welsh Birth Notification Service (WBNS)</b></p>
+                  <P>Register births and receive a newly generated NHS number.</p>
+                </div>
+              </div>
+
+            </li>
+
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link" href="#">Clinical Documents Exchange</a>
+                  </h2>
+                  <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
+                  <p class="nhsuk-card__description"><b>Welsh Clinical Communications Gateway (WCCG)</b></p>
+                    <p>Send and receive clinical documents such as referral letters.</p>
+                </div>
+              </div>
+</li>
+
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link" href="#">FHIR Documents</a>
+                  </h2>
+                  <p><strong class="nhsuk-tag nhsuk-tag--orange">Experimental</strong> <strong class="nhsuk-tag nhsuk-tag--blue">Sandbox</strong></p>
+                  <p class="nhsuk-card__description"><b>Welsh Care Record Service (WCRS)</b></p>
+                  <p>Perform faceted searches against the content and metadata of patient documentStore patient documents.</p>
+                </div>
+              </div>
+              </li>
+
+
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link" href="#">FHIR Reference Data</a>
+                  </h2>
+                  <p><strong class="nhsuk-tag nhsuk-tag--orange">Experimental</strong> <strong class="nhsuk-tag nhsuk-tag--blue">Sandbox</strong> <strong class="nhsuk-tag nhsuk-tag--grey">FHIR</strong></p>
+                  <p class="nhsuk-card__description"><b>Welsh Reference Data and Terminology Service (WRTS)</b></p>
+                    <p>Retrieve organisational reference data including lists of practitioners, GP practices and hospitals.</p>
+                </div>
+              </div>
+
+            </li>
+
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link" href="overview">FHIR Terminology service</a>
+                  </h2>
+                  <p><strong class="nhsuk-tag nhsuk-tag--orange">Experimental</strong> <strong class="nhsuk-tag nhsuk-tag--blue">Sandbox</strong> <strong class="nhsuk-tag nhsuk-tag--grey">FHIR</strong></p>
+                  <p class="nhsuk-card__description"><b>Welsh Reference Data and Terminology Service (WRTS)</b></p>
+                  <p>Search and read clinical terminologies like SNOMED CT using FHIR resources.</p>
+                </div>
+              </div>
+</li>
+
+
+<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                      <a class="nhsuk-card__link" href="#">Patient Demographics</a>
+                    </h2>
+                    <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
+                    <p class="nhsuk-card__description"><b>Welsh Demographics Service (WDS)</b></p>
+                    <p>Search for patient details such as address, date of birth and NHS number.</p>
+                  </div>
+                </div>
+</li>
+
+<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+  <div class="nhsuk-card nhsuk-card--clickable">
+    <div class="nhsuk-card__content">
+      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+        <a class="nhsuk-card__link" href="#">PROMS Event Request</a>
+      </h2>
+      <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
+      <p class="nhsuk-card__description"><b>Patient Reported Outcome Measures (PROMS)</b></p>
+        <p>Request an assessment questionnaire for a patient after a clinical event at relevant stages along a treatment pathway.</p>
+    </div>
+  </div>
+
+</li>
+
+      </ul>
+
+
+
+          <div class="nhsuk-back-to-top">
+            <a class="nhsuk-back-to-top__link" href="dev-api-catalogue">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+              </svg>
+              Back to top
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</div>
+
+{% endblock %}

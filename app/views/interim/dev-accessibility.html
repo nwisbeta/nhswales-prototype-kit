@@ -1,0 +1,147 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Terminology services
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/dev-homepage">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back</a>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <!-- Change the page title here -->
+      <h1>
+      Accessibility
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    <p>We use government standards for accessibility alongside the Web Content Accessibility Guidelines (WCAG). WCAG is widely accepted as the international standard for accessibility on the web.</p>
+    <p>Although we aim to make this website accessible to all users and achieve a WCAG conformance level of AA, we continually work with stakeholders to ensure that conformance level A is met as a minimum.</p>
+    <p><a href="#">Contact us by email</a> if you experience accessibility issues on this website.</p>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+  <h2>Use text-to-speech (TTS)</h2>
+    <h3>Adobe Read Out Loud</h3>
+    <p>Use the built-in Read Out Loud function in Adobe Reader (version 7 and above) to hear the content in a PDF.</p>
+    <p>To turn it on:</p>
+      <ol>
+        <li>Open a PDF document and click on <b>View</b></li>
+        <li>Select <b>Read Out Loud</b> from the menu</li>
+        <li>Select <b>Activate Read Out Loud</b></li>
+      </ol>
+      <br>
+    <table class="nhsuk-table">
+<caption class="nhsuk-table__caption">Read Out Loud keyboard shortcuts</caption>
+<thead role="rowgroup" class="nhsuk-table__head">
+  <tr role="row">
+    <th role="columnheader" class="" scope="col">
+      Keyboard shortcut
+    </th>
+    <th role="columnheader" class="" scope="col">
+      Action
+    </th>
+  </tr>
+</thead>
+<tbody class="nhsuk-table__body">
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">Shift + Ctrl + Y</td>
+    <td class="nhsuk-table__cell ">Activate Read Out Loud</td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">Shift + Ctrl + V</td>
+    <td class="nhsuk-table__cell ">Read current page</td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">Shift + Ctrl + B</td>
+    <td class="nhsuk-table__cell ">Read to the end of the document</td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">Shift + Ctrl + C</td>
+    <td class="nhsuk-table__cell ">Pause or resume reading</td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">Shift + Ctrl + E</td>
+    <td class="nhsuk-table__cell ">Stop reading the document</td>
+  </tr>
+</tbody>
+</table>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+  <h2>Change text size</h2>
+    <p>You can adjust the text in your browser to make content clearer and easier to read.</p>
+
+    <h3>Change text size on desktop</h3>
+    <p>In Google Chrome, Microsoft Edge and Firefox:</p>
+        <ul>
+          <li>select the settings menu, which is the three dots in the top right corner of your browser</li>
+          <li>change text size by selecting <b>Zoom -</b> or <b>+</b> </li>
+        </ul>
+    <p>Or use keyboard shortcuts (any browser):</p>
+        <ul>
+          <li> press Ctrl + '+' to increase text size</li>
+          <li> press Ctrl + '-' to decrease text size</li>
+        </ul>
+
+    <h3>Change text size on mobile</h3>
+    <p>On your iPhone:</p>
+        <ul>
+          <li>open your <b>Settings</b> app</li>
+          <li>select <b>Accessibility</b> from the menu</li>
+          <li>select <b>Display & Text size</b> from the menu</li>
+          <li>use the slider to choose your text size</li>
+          </ul>
+    <p>On your Android device:</p>
+        <ul>
+          <li>open your <b>Settings</b> app</li>
+          <li>select <b>Accessibility</b> from the menu</li>
+          <li>select <b>Font size</b> from the menu</li>
+          <li>use the slider to choose your text size</li>
+        </ul>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <h2>Download readers and viewers</h2>
+      <p>You may need to download some free readers and viewers to access different document formats:</p>
+      <ul>
+        <li><a href="https://get.adobe.com/uk/reader/">download Adobe Acrobat Reader (opens in a new window)</a> to view PDFs</li>
+      </ul>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

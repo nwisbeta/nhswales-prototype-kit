@@ -1,0 +1,91 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Terminology services
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/dev-homepage">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back</a>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <!-- Change the page title here -->
+      <h1>
+      Terms of use
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    <p>Visitors to this website are granted permission to access published materials and content subject to terms. By using the website, you agree to be bound by the terms of use.</p>
+    <ol>
+      <li>Whilst content may be accessed, downloaded and used for personal and non-commercial purposes (e.g. private research, study or in-house use), visitors must not reproduce or re-publish any material from this website without permission.</li>
+      <li>Images, logos and graphics used on this site are owned by us and/or third parties. These must not be used without obtaining permission from the copyright owner.</li>
+      <li>You acknowledge that all intellectual property rights relating to this website belong to NHS Wales and where applicable, third party associates.</li>
+      </ol>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+  <h2>Personal information</h2>
+  <p>We only use the identifiable data that you voluntarily submit for its intended purpose. For example:</p>
+  <ul>
+    <li>information submitted in a feedback form will be used to respond to your query </li>
+    <li>information submitted in a questionnaire will be used to make improvements to the service</li>
+    </ul>
+    <p>We do not share user information with 3rd parties.</p>
+
+  <h2>Virus protection</h2>
+  <p>We make every effort to check and test material for viruses. However, it is recommended that you run an anti-virus program on all materials downloaded from the internet.</P>
+    <P>We cannot accept responsibility for any loss, disruption or damage to your data or computer system which may occur whilst using material from this website.</p>
+
+  <h2>Disclaimer</h2>
+    <p>We have tried to make content as accurate as possible. However, content is provided for general information only, and you use it at your own risk. We will not be held liable for damage or loss ensuing from any act or omission resulting from the use of information on this website.</p>
+
+  <h2>External websites</h2>
+  <p>NHS Wales is not responsible for the content or reliability of any linked websites. We accept no liability in respect of the content or for the consequences of following any advice included on such sites. Listing should not be taken as an endorsement of any kind.</p>
+  <p>We cannot guarantee that these links will work all of the time and have no control over the availability of the linked pages or change of website address.</p>
+  <p>NHS Wales reserves the right to reject or remove links to any website.</p>
+
+  <h2>Google Translate</h2>
+  <p>NHS Wales websites that have the Google Translate feature enabled offer translations performed by Google™ Translate, a third party service that NHS Wales has no control over. Translated pages are not part of the hosted website, nor have any link to the NHS Wales domain.</p>
+  <p>This service is an automated computer translation and, as such, will not be a perfect translation and will be prone to mistakes that a human speaker would not otherwise make.</p>
+  <p>The translation should be used as a rough guide only. NHS Wales in no way accepts liability for the accuracy of these translations or any loss incurred as a result of them. </p>
+
+  <h2>Future changes to terms</h2>
+  <p>Subsequent changes to these terms will be made available on this website.</p>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

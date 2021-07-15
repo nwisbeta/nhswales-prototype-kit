@@ -1,0 +1,138 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Terminology services
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/dev-homepage">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back</a>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <!-- Change the page title here -->
+      <h1>
+      Privacy policy
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    <p>Digital Health and Care Wales is a national organisation delivering technology and digital services for modern patient care in Wales. To enable us to carry out our functions, we need to use personal data, by which we mean information that identifies living individuals.</p>
+    <p>Our Privacy Policy is intended for patients or others whose personal data is held and/or used by the NHS Wales Informatics Service. It explains why we hold such information, what we do with it, their rights and who they can contact if they need further information.</p>
+    <p>By understanding user behaviour and preferences, we are able to improve our website content to meet user expectations and needs.</p>
+    <p>Read <a href="https://dhcw.nhs.wales/files/privacy-notices/eng-privacypolicypublic-april2021-pdf/">how Digital Health and Care Wales handles user data</a>.</p>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+  <h2>Feedback and questions</h2>
+  <p>You can send us your feedback by using our <a href="#">online feedback form</a>. We will only use your contact details so that we can respond to your question.</p>
+
+  <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+
+  <h2>Cookies</h2>
+    <p>Cookies are pieces of data created when you visit a website. We use cookies to store information while you move around the site. You can set your computer not to accept cookies. However, if you do this, you may not be able to use some site features because we need to record your preferences in order to give you the information you need during your visit.</p>
+    <p>Our cookies do not contain any personal information about you and do not hold any information about which sites you visited before you came here.</p>
+  <h4>How to disable cookies</h4>
+    <p>You can change your cookie settings in your browser.</p>
+    <p>To change your cookie settings in Microsoft Edge:</p>
+    <ol>
+      <li>Select the settings menu in Edge, which is the three dots in the top right corner of your browser</li>
+      <li>Select <b>Settings</b></li>
+      <li>Select <b>Site permissions</b></li>
+    </ol>
+    <p>To change your cookie settings in Google Chrome:</p>
+    <ol>
+      <li>Select the settings menu in Chrome, which is the three dots in the top right corner of your browser</li>
+      <li>Select <b>Settings</b></li>
+      <li>Select <b>Privacy and security</b></li>
+      <li>Select <b>Site settings</b></li>
+      <li>Select <b>Cookies and site data</b></li>
+    </ol>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <h2>Personal Information</h2>
+    <p>We do not collect personal information about site users.</p>
+    <p>When you voluntarily submit identifiable data on this website (this includes submission of feedback forms or questionnaires), the information submitted is used solely to respond to your queries and for its intended purpose.</p>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <h2>Mailing list</h2>
+    <h3>Data we collect</h3>
+    <p>When you subscribe to our mailing list we record your email address. We also collect your subscription preferences, which at this time is limited to details of which lists you are subscribed to.</p>
+    <p>We may also record other personally identifiable information if you choose to provide it. This information is only ever used by Digital Health and Care Wales to inform decisions about the nature and content of our communications.</p>
+    <p>We use Constant Contact as our newsletter provider and to administer our mailing lists. This also provides us with usage information about our mailing lists, including statistics relating to how many subscribers open or read each newsletter and the number of clicks generated by links included in a newsletter.</p>
+
+    <h3>What we use your data for</h3>
+    <p>We will only use your personal information to send you updates from the mailing lists that you have joined.</p>
+    <p>Your address will not be added to any other lists, or shared with third parties other than our mailing list service provider, Constant Contact. We will not send any unsolicited emails.</p>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <h2>Microsoft Application Insights</h2>
+    <p>We use Application Insights to track the status of our service. We also collect usage data such as cities, device types and requests.</p>
+    <p>By default all data collected through Azure Application Insights is anonymised and the data cannot be used to match it back to an individual. </p>
+    <p>We only use this data for maintaining and improving the Developer Portal. No information collected by Application Insights will be ever be shared with 3rd parties.</p>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <h2>Hotjar</h2>
+    <p>Hotjar is a technology service that helps us to build and maintain our service based on user feedback. It captures data like:</p>
+    <ul>
+      <li>how much time users spend on pages</li>
+      <li>which links they choose to click</li>
+      <li>the way users navigate their way through the website</li>
+      </ul>
+    <p>Hotjar uses cookies and other technologies to collect data on our users’ behaviour and their devices, for example:</p>
+    <ul>
+      <li>a device’s IP address, which is captured and stored only in anonymised form</li>
+      <li>device screen size</li>
+      <li>device type</li>
+      <li>browser information</li>
+      <li>geographic location (country only)</li>
+      <li>preferred language used to display our website</li>
+      </ul>
+      <p>Hotjar stores this information in a pseudonymised user profile. Neither Hotjar or Digital Health and Care Wales will ever use this information to identify individual users or to match it with further data on an individual user. For further details, read <a href="https://www.hotjar.com/legal/policies/privacy/">Hotjar’s privacy policy</a>.</p>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+
+    <h2>Links to external sites</h2>
+    <p>We link to external websites, however this privacy policy applies only to this site and that we cannot be responsible for the privacy practices of other websites.</p>
+    <p>We do not pass on any personal information you have given us to any other website.</p>
+
+
+    </div>
+  </div>
+{% endblock %}
