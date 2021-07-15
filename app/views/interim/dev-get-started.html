@@ -29,7 +29,7 @@
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <div class="nhsuk-back-link">
-  <a class="nhsuk-back-link__link" href="/dev-homepage">
+  <a class="nhsuk-back-link__link" href="/interim/dev-homepage">
     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
     </svg>
@@ -48,22 +48,22 @@
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
       <p class="nhsuk-lede-text">
-        Learn about our APIs and how you can use them.</p>
+        Learn about NHS Wales' APIs, how you can use them and how to integrate them with your application.</p>
         <div class="nhsuk-inset-text">
     <span class="nhsuk-u-visually-hidden">Information: </span>
-    <p>This content is not translated into Welsh because it is not intended for patients or the public. <a href="#">Read more about our Welsh standards</a>.</p>
+    <p>This content is not translated into Welsh because it is not intended for patients or the public. <a href="#welsh">Read more about our Welsh standards</a>.</p>
   </div>
     <h2>Overview</h2>
-        <p>The NHS Wales Developer Portal gives help and support to users who want to use APIs to interact with key NHS Wales systems.</p>
-        <p>We've grouped together information about our APIs, how to test them and how to integrate them in one place. All content is written with clear language, and it's easy to navigate the site to find what you need.</p>
-        <p>We are currently in Beta. This means that we're still testing the site and making changes. Give feedback to help us to improve.</p>
+        <p>The NHS Wales Developer Portal tells users everything they need to know about the APIs that interact with key NHS Wales systems.</p>
+        <p>We've grouped information about our APIs, how to test them and how to integrate them in one place. All content is written clearly, and it's easy to navigate the site to find what you need.</p>
+        <p>We're currently in Beta. This means that we're still testing the site and making changes. <a href="mailto:ecosphere@wales.nhs.uk">Give feedback to help us to improve</a>.</p>
         <h3>Who the portal is for</h3>
-        <p>The site can be viewed by everyone. However, its content is currently only intended for:</p>
+        <p>The site is open and its content can be viewed by anyone. However, the content is currently only intended for:</p>
         <ul>
         <li>NHS Wales development teams</li>
         <li>development teams contracted to integrate with NHS Wales systems</li>
         </ul>
-        <p>As the site is not intended for general use by patients or the public, some content has not been translated into Welsh. <a href="#">Read more about our Welsh standards</a>.</p>
+        <p>As the site is not intended for general use by patients or the public, some content has not been translated into Welsh. <a href="#welsh">Read more about our Welsh standards</a>.</p>
         <h3>Who maintains the developer portal</h3>
         <p>The site is maintained by the <a href ="https://digitalhealth.wales/dhew">Digital Health Ecosystem Team Wales (DHEW)</a> programme.</p>
         <p>DHEW is a collaboration between Digital Health and Care Wales (DHCW) and the Life Sciences Hub Wales (LSHW), and aims to make it easier and faster to adopt digital healthcare technology in Wales.</p>
@@ -111,7 +111,7 @@
           <p>These control user access to data. Applications should:</p>
             <ul>
             <li>authenticate users with NADEX or AC3</li>
-            <li>apply Role Based Access Controlslocally or with AC3</li>
+            <li>apply role based Access Controls locally or with AC3</li>
             <li>WCRS document search and retrieval APIs</li>
             <li>record usage to local audit logs or to the Central Audit Service (CAS)</li>
             </ul>
@@ -156,8 +156,8 @@
 
      <h3>FHIR and OpenEHR</h3>
      <p>We also use HL7 FHIR and OpenEHR, which are modern standards for healthcare systems.</p>
-     <p>FHIR is a standard for communication between systems. It defines structures for common data entities, for example patient, and an API. The core standard aims to cater for 80% of use cases, with options to extend and customise definitions for other use cases. The <a href="#">terminology service</a> is an example of a system that uses FHIR standard.</p>
-     <p>OpenEHR is a separate standard that publishes its own data definitions and API specifications for use in healthcare. In addition, it defines models for data persistence in the underlying system. The <a href="#">Clinical Data Repository</a> is an example of a service that uses OpenEHR.</p>
+     <p>FHIR is a standard for communication between systems. It defines structures for common data entities, for example patient, and an API. The core standard aims to cater for 80% of use cases, with options to extend and customise definitions for other use cases. The <a href="overview">terminology service</a> is an example of a system that uses FHIR standards.</p>
+     <p>OpenEHR is a separate standard that publishes its own data definitions and API specifications for use in healthcare. In addition, it defines models for data persistence in the underlying system. The Clinical Data Repository is an example of a service that uses OpenEHR. Read more in the blog post <a href="https://digitalhealth.wales/news/what-openehr-and-why-it-important" target="_blank">What is openEHR and why is it important? (opens in a new window)</a>.</p>
      <p>We expect that all new systems will provide an API that conforms to one of these two standards.</p>
 
      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
@@ -169,13 +169,13 @@
       <li>live APIs, which are already in widespread use</li>
       <li>experimental APIs, which you can test in the sandbox and suggest improvements</li>
       </ul>
-      <p>As we are in Beta, we are in the process of writing user guides and technical documentation for each API using evidence from users.</p>
+      <p>As we're in Beta, we're still developing the technical documentation for some APIs.</p>
 
     <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 
     <h2>4. Test and go live</h2>
     <h3>Sandbox APIs</h3>
-      <p>We have some <a href="#">sandbox APIs</a> available for users to test, learn, and start to integrate with.</p>
+      <p>We have some <a href="sandbox">sandbox APIs</a> available for users to test, learn, and start to integrate with.</p>
       <p>To test an API in the sandbox, you should:</p>
       <ol>
         <li><a href="https://developer.nhs.wales/signin">Sign in or register an account.</li>
@@ -192,8 +192,8 @@
         <p>Access to these environments is subject to an assurance process.</p>
     <h3>The assurance process</h3>
       <p>We will ask you some questions to make sure that your use case for integrating your application with an API meets with our standards.</p>
-      <p>This process can change depending upon which API you're requesting access to. Find the API you'd like to access in the <a href=#>API catalogue</a> and read its documentation to see the most up to date process.</p>
-      <p>If the API does not have information about its assurance process, <a href="#">email ecosystem@wales.nhs.uk</a>.</p>
+      <p>This process can change depending upon which API you're requesting access to. Find the API you'd like to access in the <a href="dev-api-catalogue">API catalogue</a> and read its documentation to see the most up to date process.</p>
+      <p>If the API does not have information about its assurance process, <a href="mailto:ecosystem@wales.nhs.uk">email ecosystem@wales.nhs.uk</a>.</p>
       <p>Production access will be provided once your application passes our checks.</p>
 
       <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
@@ -204,7 +204,7 @@
 
       <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
 
-      <h2>6. Understand Welsh language requirements</h2>
+      <a id="welsh"></a><h2> Welsh language standards</h2>
       <h3>What content we provide in Welsh</h3>
       <p>We aim to provide Welsh translation where possible. However, because the content of this website is not intended for patients or the public, we have not translated more technical information.</p>
       <p>The content that is translated into Welsh includes:</p>
@@ -214,13 +214,14 @@
         <li>site navigation</li>
         </ul>
         <h3>Ask for Welsh translation</h3>
-        <p>If you are applying for a tender, you can ask us to translate any of this site's content into Welsh. <a href="#">Email ecosystem@wales.nhs.uk</a> and include:</p>
+        <p>If you are applying for a tender, you can ask us to translate any of this site's content into Welsh.</p>
+        <p><a href="mailto:ecosystem@wales.nhs.uk">Email ecosystem@wales.nhs.uk</a> and include:</p>
         <ul>
           <li>your name and organisation</li>
           <li>which tender you are applying for</li>
           <li>the url of each page you need in Welsh</li>
           </ul>
-      <h3>Your Welsh language requirements when creating apps for Welsh patients and public</h3>
+      <h3>Your Welsh language requirements when creating apps for patients and the public</h3>
       <p>You have a responsibility to consider Welsh language requirements when creating an application for use by Welsh public, patients and clinicians.</p>
       <p>This ensures that the Welsh language is treated no less favourably than English, and allows all users to access information in Welsh if they choose to.</p>
       <p>There is lots of clear advice available in the <a href="https://gov.wales/sites/default/files/publications/2021-03/technology-websites-and-software-welsh-language-considerations.pdf" source="_blank">Welsh Language Commissioner's Welsh Language Considerations document (opens in a new window)</a>. It includes information about bilingually designing your application's:</p>
@@ -235,7 +236,20 @@
         </ul>
         <p>Another helpful resource is the <a href="https://gov.wales/bilingual-technology-toolkit-good-user-experience" source="_blank">bilingual technology toolkit for good user experience (opens in a new window)</a>. Use this to break down your application's Welsh language requirements by priority.</p>
 
+        <div class="nhsuk-back-to-top">
+          <a class="nhsuk-back-to-top__link" href="dev-get-started">
+            <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+            </svg>
+            Back to top
+          </a>
+        </div>
+        </div>
 
+        </div>
+        </div>
+
+        </div>
 
 
       <!-- End of content -->
