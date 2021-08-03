@@ -62,7 +62,7 @@
           <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
               <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=cas-audit-logging">Write user activity to a central audit log</a>
+                <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=cas-audit-logging">User authentication and authorisation</a>
               </h2>
             <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
               <p class="nhsuk-card__description"><b>Central Audit Service (CAS)</b></p>
@@ -77,7 +77,7 @@
           <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
               <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wams-address-matching">Search and match patient addresses</a>
+                <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wams-address-matching">Patient address search and match</a>
               </h2>
               <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
               <p class="nhsuk-card__description"><b>Welsh Address Matching Service (WAMS)</b></p>
@@ -92,7 +92,7 @@
               <div class="nhsuk-card nhsuk-card--clickable">
                 <div class="nhsuk-card__content">
                   <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wbns-birth-notifications">Register a birth</a>
+                    <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wbns-birth-notifications">Birth registration</a>
                   </h2>
                   <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
                   <p class="nhsuk-card__description"><b>Welsh Birth Notification Service (WBNS)</b></p>
@@ -107,7 +107,7 @@
               <div class="nhsuk-card nhsuk-card--clickable">
                 <div class="nhsuk-card__content">
                   <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wccg-clinical-document-exchange">Send and receive clinical documents</a>
+                    <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wccg-clinical-document-exchange">Clinical document exchange</a>
                   </h2>
                   <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
                   <p class="nhsuk-card__description"><b>Welsh Clinical Communications Gateway (WCCG)</b></p>
@@ -121,14 +121,28 @@
               <div class="nhsuk-card nhsuk-card--clickable">
                 <div class="nhsuk-card__content">
                   <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wcrs-fhir-documents&operation=post-documentreference">Search patient document content</a>
+                    <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wcrs-documents&operation=StoreDocument">Patient document storage</a>
                   </h2>
-                  <p><strong class="nhsuk-tag nhsuk-tag--orange">Experimental</strong> <strong class="nhsuk-tag nhsuk-tag--blue">Sandbox</strong> <strong class="nhsuk-tag nhsuk-tag--grey">FHIR</strong></p>
+                  <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
                   <p class="nhsuk-card__description"><b>Welsh Care Record Service (WCRS)</b></p>
-                  <p>Search the content and metadata of patient documents using FHIR resources.</p>
+                  <p>Store documents such as referrals in WCRS in formats including XML, PDF and Word with metadata.</p>
                 </div>
               </div>
               </li>
+
+              <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                      <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wcrs-documents-advanced-search">Patient document advanced search</a>
+                    </h2>
+                    <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--purple">SOLR</strong></p>
+                    <p class="nhsuk-card__description"><b>Welsh Care Record Service (WCRS)</b></p>
+                    <p>Perform an advanced search of WCRS to find patient documents using Apache Solr. Group and filter results by category to find documents more quickly.</p>
+                  </div>
+                </div>
+                </li>
 
 
             <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
@@ -136,7 +150,7 @@
               <div class="nhsuk-card nhsuk-card--clickable">
                 <div class="nhsuk-card__content">
                   <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wrds-fhir-reference-data&operation=fhir-base-query">Retrieve organisational reference data</a>
+                    <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wrds-fhir-reference-data&operation=fhir-base-query">Reference data retrieval (FHIR)</a>
                   </h2>
                   <p><strong class="nhsuk-tag nhsuk-tag--orange">Experimental</strong> <strong class="nhsuk-tag nhsuk-tag--blue">Sandbox</strong> <strong class="nhsuk-tag nhsuk-tag--grey">FHIR</strong></p>
                   <p class="nhsuk-card__description"><b>Welsh Reference Data and Terminology Service (WRTS)</b></p>
@@ -151,7 +165,7 @@
               <div class="nhsuk-card nhsuk-card--clickable">
                 <div class="nhsuk-card__content">
                   <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link" href="overview">Search and read a clinical terminology</a>
+                    <a class="nhsuk-card__link" href="overview">Terminology search (FHIR)</a>
                   </h2>
                   <p><strong class="nhsuk-tag nhsuk-tag--orange">Experimental</strong> <strong class="nhsuk-tag nhsuk-tag--blue">Sandbox</strong> <strong class="nhsuk-tag nhsuk-tag--grey">FHIR</strong></p>
                   <p class="nhsuk-card__description"><b>Welsh Reference Data and Terminology Service (WRTS)</b></p>
@@ -165,7 +179,7 @@
   <div class="nhsuk-card nhsuk-card--clickable">
     <div class="nhsuk-card__content">
       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=mpi-pdq&operation=60143c971736ea0c74988ff9">Match patient demographic information across systems</a>
+        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=mpi-pdq&operation=60143c971736ea0c74988ff9">Patient demographic information search and match</a>
       </h2>
       <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
       <p class="nhsuk-card__description"><b>Master Patient Index (MPI)</b></p>
@@ -179,7 +193,7 @@
   <div class="nhsuk-card nhsuk-card--clickable">
     <div class="nhsuk-card__content">
       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wds-patient-demographics">Search patient demographic information</a>
+        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wds-patient-demographics">Patient demographic information search</a>
       </h2>
       <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
       <p class="nhsuk-card__description"><b>Welsh Demographics Service (WDS)</b></p>
@@ -189,26 +203,13 @@
 </li>
 
 
-<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-
-                <div class="nhsuk-card nhsuk-card--clickable">
-                  <div class="nhsuk-card__content">
-                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                      <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=mpi-pdq&operation=60143c971736ea0c74988ff9">Search for patient details</a>
-                    </h2>
-                    <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
-                    <p class="nhsuk-card__description"><b>Welsh Demographics Service (WDS)</b></p>
-                    <p>Search for a patient's identifying information, such as their address, date of birth and NHS number.</p>
-                  </div>
-                </div>
-</li>
 
 <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
 
   <div class="nhsuk-card nhsuk-card--clickable">
     <div class="nhsuk-card__content">
       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=proms-event-request">Request a PROMS questionnaire</a>
+        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=proms-event-request">PROMS event questionnaire request</a>
       </h2>
       <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
       <p class="nhsuk-card__description"><b>Patient Reported Outcome Measures (PROMS)</b></p>
@@ -223,11 +224,11 @@
   <div class="nhsuk-card nhsuk-card--clickable">
     <div class="nhsuk-card__content">
       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wcrs-fhir-documents">Store patient documents</a>
+        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wcrs-fhir-documents&operation=post-documentreference">Patient document storage (FHIR)</a>
       </h2>
       <p><strong class="nhsuk-tag nhsuk-tag--orange">Experimental</strong> <strong class="nhsuk-tag nhsuk-tag--blue">Sandbox</strong> <strong class="nhsuk-tag nhsuk-tag--grey">FHIR</strong></p>
       <p class="nhsuk-card__description"><b>Welsh Care Records Service (WCRS)</b></p>
-        <p>Store documents in the WCRS using the FHIR DocumentReference resource.</p>
+        <p>Store documents in WCRS using the FHIR DocumentReference resource.</p>
     </div>
   </div>
 
@@ -236,7 +237,7 @@
     <div class="nhsuk-card nhsuk-card--clickable">
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
-          <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wrrs-fhir-diagnostics&operation=get-diagnosticreport">Search and retrieve patient test results (pathology and radiology)</a>
+          <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wrrs-fhir-diagnostics&operation=get-diagnosticreport">Patient test results search (FHIR)</a>
         </h2>
         <p><strong class="nhsuk-tag nhsuk-tag--orange">Experimental</strong> <strong class="nhsuk-tag nhsuk-tag--blue">Sandbox</strong> <strong class="nhsuk-tag nhsuk-tag--grey">FHIR</strong></p>
         <p class="nhsuk-card__description"><b>Welsh Results Reporting Service (WRRS)</b></p>
@@ -251,22 +252,7 @@
   <div class="nhsuk-card nhsuk-card--clickable">
     <div class="nhsuk-card__content">
       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=ac3-account-control-auth">Authenticate and authorise users</a>
-      </h2>
-      <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
-      <p class="nhsuk-card__description"><b>Account Control 3 (AC3)</b></p>
-        <p>Get access to the AC3 identity provider to authenticate users as well as manage and check their access rights.</p>
-    </div>
-  </div>
-
-</li>
-
-<li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-
-  <div class="nhsuk-card nhsuk-card--clickable">
-    <div class="nhsuk-card__content">
-      <h2 class="nhsuk-card__heading nhsuk-heading-m">
-        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=ac3-account-control-auth">Perform a patient identifer cross-reference (PIX)</a>
+        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=ac3-account-control-auth">Patient identifer cross-reference (PIX)</a>
       </h2>
       <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
       <p class="nhsuk-card__description"><b>Master Patient Index (MPI)</b></p>
@@ -281,7 +267,7 @@
   <div class="nhsuk-card nhsuk-card--clickable">
     <div class="nhsuk-card__content">
       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wrds-reference-data-and-schema-lookup&operation=GetNamespaceSchema">Lookup WRDS reference data and schema</a>
+        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wrds-reference-data-and-schema-lookup&operation=GetNamespaceSchema">Reference data and schema lookup</a>
       </h2>
       <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--pink">REST</strong></p>
       <p class="nhsuk-card__description"><b>Welsh Reference Data Service (WRDS)</b></p>
@@ -296,7 +282,7 @@
   <div class="nhsuk-card nhsuk-card--clickable">
     <div class="nhsuk-card__content">
       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wrds-reference-data-standard-lookup&operation=5f070fcc1736ea12a0a51912">Lookup WRDS reference data</a>
+        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wrds-reference-data-standard-lookup&operation=5f070fcc1736ea12a0a51912">Reference data standard lookup</a>
       </h2>
       <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
       <p class="nhsuk-card__description"><b>Welsh Reference Data Service (WRDS)</b></p>
@@ -311,7 +297,7 @@
   <div class="nhsuk-card nhsuk-card--clickable">
     <div class="nhsuk-card__content">
       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wgpr-gp-record-retrieval">Retrieve patient GP clinical records</a>
+        <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wgpr-gp-record-retrieval">RPatient GP record retrieval</a>
       </h2>
       <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
       <p class="nhsuk-card__description"><b>Welsh Reference Data Service (WRDS)</b></p>
@@ -324,11 +310,11 @@
     <div class="nhsuk-card nhsuk-card--clickable">
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
-          <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wrrs-results-and-reporting">Request and report test results (radiology and pathology)</a>
+          <a class="nhsuk-card__link" href="https://developer.nhs.wales/api-details#api=wrrs-results-and-reporting">Patient test results request and report</a>
         </h2>
         <p><strong class="nhsuk-tag nhsuk-tag--aqua-green">Live</strong> <strong class="nhsuk-tag nhsuk-tag--grey">SOAP</strong></p>
         <p class="nhsuk-card__description"><b>Welsh Results Reporting Service (WRRS)</b></p>
-          <p>Request radiology scans and pathology tests on speciments like blood samples.</p>
+          <p>Request radiology scans and pathology tests on specimens like blood samples.</p>
       </div>
     </div>
 
