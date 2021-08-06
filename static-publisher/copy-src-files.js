@@ -1,9 +1,5 @@
 var fs = require("fs-extra");
 
-// cp public/* _site/ &&
-// cp node_modules/@nwisbeta/nhswales-frontend/packages _site/nhsuk-frontend &&
-// cp node_modules/@nwisbeta/nhswales-frontend/dist _site/nhswales-frontend
-
 var error = function(err){
     if (err) return console.error(err)
 }
