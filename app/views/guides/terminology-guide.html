@@ -1,10 +1,10 @@
-{% from 'side-navigation/macro.njk' import sideNavigation %}
 <!-- Use this page as the index for your project -->
 
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
+{% from 'side-navigation/macro.njk' import sideNavigation %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -18,13 +18,11 @@
 
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
-{% block beforeContent %}
-{% endblock %}
+{% block beforeContent %}{% endblock %}
 
 <!-- For adding a back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
-{% block outerContent %}
-{% endblock %}
+{% block outerContent %}{% endblock %}
 
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
@@ -33,18 +31,31 @@
 {{ sideNavigation({
     items: [
       { id: "overview", display: "Overview", active: true },
-      { id: "1-learn-how-nhs-wales-uses-apis", display: "How NHS Wales uses APIs" },
-      { id: "2-learn-our-api-technologies-and-standards", display: "Learn our API technologies and standards" },
-      { id: "3-search-for-apis", display: "Search for APIs" },
-      { id: "4-test-and-go-live", display: "Test and go live" },
-      { id: "5-get-help-and-support", display: "Get help and support" },
-      { id: "welsh-language-standards", display: "Welsh language standards" }
+      { id: "get-started", display: "Get started" },
+      { id: "about-fhir-apis", display: "About FHIR APIs" },
+      { id: "about-snomed-ct", display: "About SNOMED CT" },
+      { id: "example-api-requests-and-sandbox", display: "Example API requests" }
     ]
   })
 }}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-      {% markdown 'includes/dev-get-started-guide.md' %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <section class="nhsuk-side-navigation__section">
+        {% markdown "includes/overview.md" %}
+      </section>
+      <section class="nhsuk-side-navigation__section">
+        {% markdown "includes/get-started.md" %}
+      </section>
+      <section class="nhsuk-side-navigation__section">
+        {% markdown "includes/about-fhir-apis.md" %}
+      </section>
+      <section class="nhsuk-side-navigation__section">
+        {% markdown "includes/about-snomed-ct.md" %}
+      </section>
+      <section class="nhsuk-side-navigation__section">
+        {% markdown "includes/example-api-request.md" %}
+      </section>
     </div> <!-- end "nhsuk-grid-column-two-thirds" -->
   </div> <!-- end "nhsuk-grid-row" -->
 </div> <!-- end "nhsuk-side-navigation-container"> -->
