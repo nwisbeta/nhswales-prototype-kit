@@ -1,0 +1,155 @@
+[
+  {
+    "title": "User authentication and authorisation",
+    "description": "Authenticate users with their AC3 identity and verify their role and permissions",
+    "type": "SOAP",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "restricted",
+    "overview": "Get access to the AC3 identity provider.\nApplications use this to authenticate users as well as manage and check their access rights.\nIt is available nationally across primary and secondary care.\n"
+  },
+  {
+    "title": "Audit Logging",
+    "description": "Write pre-defined audit events for AC3 users that are compliant with audit requirements, and make audit logs available to other systems.",
+    "type": "SOAP",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "restricted",
+    "overview": "Write pre-defined audit events for AC3 users to the Central Audit Service (CAS).\nApplications use this to be compliant with audit requirements and make audit logs available to other systems\nsuch as the National Intelligent Integrated Auditing Solutions (NIIAS). It is available nationally.\n"
+  },
+  {
+    "title": "Patient demographic information search and match",
+    "description": "Search for and match patient-identifying information across multiple sustems, such as NHS number, sex, date of birth, and address.",
+    "type": "SOAP/HL7",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "restricted",
+    "overview": "Search for patient demographic information such as NHS number, sex, date of birth, and address.\nThis API implements the Patient Demographic Query integration profile from IHE and is used by\nclinical applications to allow users to match a patient record across multiple systems.\nIt is available nationally and used across primary and secondary care in all health boards.\n"
+  },
+  {
+    "title": "Patient Identifer Cross-Reference (PIX)",
+    "description": "Look up alternative local identifiers for a patient from multiple systems using the Master Patient Index (MPI).",
+    "type": "SOAP/HL7",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "restricted",
+    "overview": "Look up alternative local identifiers for a patient using the Master Patient Index. \nThis API implements the Patient Identifer Cross-Reference (PIX) integration profile from IHE.\nIt is used by clinical applications to fetch a patients records from multiple systems using local IDs.\nIt is available nationally and used across primary and secondary care in all health boards.\n"
+  },
+  {
+    "title": "PROMS event questionnaire request",
+    "description": "Request an assessment questionnaire for a patient after a clinical event at relevant stages along a treatment pathway.",
+    "type": "SOAP",
+    "owner": "NWIS - Corporate Applications",
+    "status": "stable",
+    "access": "internal",
+    "overview": "The standard API used to trigger PROMs capture by the National PROMs platform (https://proms.nhs.wales).\nThe API is used by patient administration systems to request that questionnaires be sent to patients at relevant stages along a treatment pathway.\nIt is available nationally, and is used in almost all health boards.\n"
+  },
+  {
+    "title": "Patient address search and match",
+    "description": "Search for an address in the nationally approved address list.",
+    "type": "SOAP",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "public",
+    "overview": "Search and match against the Welsh Address Matching Service (WAMS).\nBoth a SOAP and equivalent Web RPC style API are available.\nApplications use this API to provide users with address searching and to standardise manually entered addresses to be consistent with other systems.\nIt is available nationally.\n"
+  },
+  {
+    "title": "Birth registration",
+    "description": "Register a birth and receive a newly-generated NHS number.",
+    "type": "SOAP/HL7",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "internal",
+    "overview": "This API accepts HL7 ADT messages with details of a birth, including mother's details, time of birth, gender, and birth weight. It responds with a newly generated NHS Number. It is used by maternity systems to notify downstream systems of births and obtain NHS Numbers for newborns. It is available nationally.\n"
+  },
+  {
+    "title": "Clinical Documents Exchange",
+    "description": "Send and receive clinical documents, such as referral letters.",
+    "type": "SOAP",
+    "owner": "NWIS - Community Applications",
+    "status": "stable",
+    "access": "restricted",
+    "overview": "Allow registered users and applications to exchange clinical documents.\nThe API is used by GP Systems and WCCIS to exchange documents such as electronic referrals with secondary care applications.\nIt is available nationally.\n"
+  },
+  {
+    "title": "Patient document storage",
+    "description": "Store and retrieve documents such as referrals in WCRS in formats including XML, PDF and Word with metadata. You can also perform basic searches.",
+    "type": "SOAP",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "restricted",
+    "overview": "Store documents in the Welsh Care Records Service (WCRS), the central patient document store for NHS Wales.\nYou can use the API to store and retrieve patient documents in a variety of formats, such as XML, PDF, and Microsoft Word, with relevant metadata. \nUsing the search functionality you can query for a document by its metadata.\nThis API is used to make clinical documents such as discharge advice letters, care plans, and referrals. accessible by other systems. It is available nationally and used by all health boards.\n"
+  },
+  {
+    "title": "Patient document advanced search",
+    "description": "Perform an Apache Solr faceted search of WCRS to find patient documents. Group and filter results by category to find documents more quickly.",
+    "type": "Solr",
+    "owner": "NWIS - Corporate Applications",
+    "status": "stable",
+    "access": "restricted",
+    "overview": "We use Apache Solr to provide advanced search against patient documents in the Welsh Care Record Service.\nYou can perform general searches across all document content as well as metadata, for which a standard set of fields is defined for all documents.\nFaceted search allows you to group and filter results by category until you find the document you're looking for.\nThe advanced search features are primarily used by the Welsh Clinical Portal to allow users to browse for relevant patient documents.\nIt is available nationally and used by all health boards.\n"
+  },
+  {
+    "title": "Patient demographic information search",
+    "description": "Search for patient details such as NHS number, name, and date of birth.",
+    "type": "SOAP",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "restricted",
+    "overview": "Access the Welsh Demographics Service. You can search for a patient by NHS Number, or information such as name and date of birth. \nA standard exists for synchronising this data with a system's locally stored patient record.\nIt is used by applications to keep patient information accurate and up-to-date.\nIt is available nationally and used across primary and secondary care in all health boards.\n"
+  },
+  {
+    "title": "Patient GP record retrieval",
+    "description": "Access patient data held on GP systems such as medications, diagnoses, and test results.",
+    "type": "SOAP",
+    "owner": "NWIS - Community Applications",
+    "status": "stable",
+    "access": "restricted",
+    "overview": "Access the patient data held on GP systems such as medications, problems and diagnoses, and test results. \nIt is used by the Welsh Clinical Portal and Choose Pharmacy to retrieve the currently prescribed medications for a patient.\nIt is available nationally across primary and secondary care.\n"
+  },
+  {
+    "title": "Reference data and schema Lookup",
+    "description": "Retrieve table schemas and data listing all fields in the database.",
+    "type": "REST",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "public",
+    "overview": "A RESTful service providing similar functionality to the standard lookup API for retrieving reference data from WRDS. \nAdditionally with this API you can retrieve the table schema to build POCO objects for deserialising the responses. \nIt is available nationally.\n"
+  },
+  {
+    "title": "Reference Data Bulk Sync",
+    "description": "Read and sync bulk data by date by registering for specific data-sets in advance",
+    "type": "SOAP",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "restricted",
+    "overview": "This API allows registered users to query for changes to their pre-specified sets of reference data and retrieve full or partial changes in bulk.\nIt is used by systems to efficiently cache reference data that would otherwise need to be fetched via the other lookup APIs.\nIt is available nationally.\n"
+  },
+  {
+    "title": "Reference data standard lookup",
+    "description": "Retrieve specific fields from reference sets such as location codes for hospitals, lists of available drugs, and pathology tests.",
+    "type": "SOAP",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "public",
+    "overview": "A SOAP service supporting ad-hoc enquiries against WRDS, the store of nationally agreed reference data.\nThe API is used by applications to retrieve data, such as location codes for GP practices, hospitals, pharmacies, lists of available drugs, and pathology tests.\nIt is suitable for production use and is available nationally.\n"
+  },
+  {
+    "title": "Terminology Search",
+    "description": "Search and read clinical terminologies like SNOMED CT using FHIR resources.",
+    "type": "REST/FHIR",
+    "owner": "NWIS - Ecosystem Team",
+    "status": "beta",
+    "access": "public",
+    "overview": "Search for clinical ontology codes like SNOMED CT using FHIR Resources. \nThis API should be considered experimental. \nAnybody can try out the demo/sandbox implementation and provide feedback. \nIt is available in the sandbox environment and being tested internally for production use.\n"
+  },
+  {
+    "title": "Patient test results request and report",
+    "description": "Request radiology scans and pathology tests on specimens like blood samples.",
+    "type": "SOAP",
+    "owner": "NWIS - Integration and Reference",
+    "status": "stable",
+    "access": "internal",
+    "overview": "Search and retrieve patient test requests and results.\nThis service also mediates requests to Laboratory and Radiology Management Systems and returns request IDs\nso that specimens can be labelled and subsequently identified when received by laboratories.\nApplications use it to allow users in hospitals and GP surgeries to request diagnostic tests, generate barcode labels\nfor the specimen containers, and display results as either a detailed list or chart and table.\nIt is available nationally in primary and secondary care.\n"
+  }
+]

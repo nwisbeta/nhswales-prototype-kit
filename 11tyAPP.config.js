@@ -55,12 +55,14 @@ let nunjucksConfig = {
 module.exports = function(eleventyConfig) {
   let appViews = [
     path.join(__dirname, 'app/views'),
+    path.join(__dirname, 'app/views/ideal'),
     path.join(__dirname, 'app/markdown'),
     path.join(__dirname, 'node_modules/@nwisbeta/nhswales-frontend/packages/components'),
     path.join(__dirname, 'node_modules/@nwisbeta/nhswales-frontend/packages'),
     path.join(__dirname, 'node_modules/@nwisbeta/nhswales-frontend/dist'),
     path.join(__dirname, 'docs/views')
   ]
+
 
   let nunjucksAppEnv = nunjucks.configure(appViews, nunjucksConfig);
   nunjucksAppEnv.addGlobal('version', packageInfo.version);

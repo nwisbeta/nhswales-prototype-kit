@@ -1,3 +1,4 @@
+{% from 'side-navigation/macro.njk' import sideNavigation %}
 <!-- Use this page as the index for your project -->
 
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
@@ -28,29 +29,23 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-<div class="nhsuk-back-link">
-  <a class="nhsuk-back-link__link" href="/dev-homepage">
-    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-    </svg>
-    Go back</a>
-</div>
+<div class="nhsuk-side-navigation-container" >
+{{ sideNavigation({
+    items: [
+      { id: "overview", display: "Overview", active: true },
+      { id: "1-learn-how-nhs-wales-uses-apis", display: "How we use APIs" },
+      { id: "2-learn-our-api-technologies-and-standards", display: "API Standards" },
+      { id: "3-search-for-apis", display: "Search for APIs" },
+      { id: "4-test-and-go-live", display: "Test and go live" },
+      { id: "5-get-help-and-support", display: "Help and support" },
+      { id: "welsh-language-standards", display: "Welsh standards" }
+    ]
+  })
+}}
 <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-
-
-      <!-- Change the page title here -->
-      <h1>
-      My subscriptions
-      </h1>
-    <p>Subscribe to test APIs with mock data in the sandbox.</p>
-    <p>You can make 5 calls a minute with a maximum of 100 calls a week.</P>
-    <a href="dev-subscriptions-signedin"<button class="nhsuk-button" type="submit">
-  Subscribe to Sandbox
-</button></a>
-
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-
-
+  <div class="nhsuk-grid-column-two-thirds">
+      {% markdown 'includes/dev-get-started-guide.md' %}
+    </div> <!-- end "nhsuk-grid-column-two-thirds" -->
+  </div> <!-- end "nhsuk-grid-row" -->
+</div> <!-- end "nhsuk-side-navigation-container"> -->
 {% endblock %}
