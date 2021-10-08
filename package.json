@@ -4,15 +4,7 @@
   "description": "Rapidly create HTML prototypes of NHS Wales websites and services.",
   "main": "app.js",
   "scripts": {
-    "build": "npx gulp build",
-    "postinstall": "npm run build",
-    "start": "node app.js",
-    "test": "",
-    "prewatch": "npx gulp build",
-    "watch": "npx gulp",
-    "buildstatic": "eleventy --config 11tyAPP.config.js && gulp build",
-    "copystatic": "node .\\static-publisher\\copy-src-files.js",
-    "publisher": "npm run buildstatic && npm run copystatic"
+    "build": "eleventy --config 11tyAPP.config.js && gulp build"
   },
   "author": "https://github.com/nwisbeta/",
   "license": "MIT",
@@ -35,6 +27,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.0",
     "keypather": "^3.0.0",
+    "marked": "^3.0.7",
     "nunjucks": "^3.2.3",
     "nunjucks-markdown": "^2.0.1",
     "path": "^0.12.7",

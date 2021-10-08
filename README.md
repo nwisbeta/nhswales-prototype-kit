@@ -1,27 +1,19 @@
-# NHS.Wales prototype kit
+# NHS Wales Prototype Kit (Static Site Generator Version)
 
-Visit the <a href="http://nhswales-prototype-kit.azurewebsites.net/docs">NHS.Wales prototype kit site</a> to download the latest version and read the documentation.
+> **NOTE: This is a work in progress**
 
-## About the NHS.Wales prototype kit
+The NHS Wales Prototype Kit is a fork of the NHS UK Prototype Kit.
 
-The NHS.Wales prototype kit enables you to make interactive prototypes that will look like pages on NHS.Wales. The prototypes you make are a great way to show ideas to others and for conducting user research.
+That kit uses Express with Nunjucks to do dynamic templating. 
 
-## Security
+This fork is an experiment in using Eleventy to generate the site as static content,
 
-If you publish your prototypes online, they must be protected by a <a href="http://nhswales-prototype-kit.azurewebsites.net/docs/how-tos/heroku">username and password</a>. This is to prevent members of the public finding prototypes and thinking they are real services.
+The content to be publish is in the `/app` folder
 
-You must protect user privacy at all times, even when using prototypes. Prototypes made with the kit look like NHS.Wales, but do not have the same security provisions. Always make sure you are handling user data appropriately.
+`npm run build` will 
+ - run eleventy to process any nunjucks and markdown
+ - run gulp (to transpile css and javascript and copy assets)
 
-## Installation instructions
+ The generated static site will be output to the `_site` directory
 
-- <a href="http://nhswales-prototype-kit.azurewebsites.net/docs/install/simple">Install guide (non technical)</a>
-- <a href="http://nhswales-prototype-kit.azurewebsites.net/docs/install/advanced">Developer friendly install guide (technical)</a>
-
-## Contribute
-
-If you want to contribute to the NHS.Wales prototype kit, by reporting bugs, fixing bugs, suggesting new features or writing documentation, then read our [contributing guidelines](CONTRIBUTING.md).
-
-## Support
-
-The NHS.Wales prototype kit is currently under development by Digital Health and Care Wales. 
-There is no support currently available
+ If hostin in Azure Storage using the static website feature, use [scripts/PublishTo-AzureStorage.ps1](scripts/PublishTo-AzureStorage.ps1)
